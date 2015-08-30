@@ -22,11 +22,11 @@
         <ul class="nav navbar-nav navbar-right">
             <!-- Link to Search App -->
             <li>
-                <a data-ng-href="{{header.homeLink}}">Home</a>
+                <a data-ng-href="{{header.homeLink}}{{header.brand.url}}">Home</a>
             </li>
             <!-- Link to Front Page App -->
             <li>
-                <a data-ng-click="header.staticLinkClicked('about');">About</a>
+                <a data-ng-href="{{header.createStaticLink('about')}}">About</a>
             </li>
             <!-- Link with sub options -->
             <li class="dropdown">
@@ -41,7 +41,7 @@
             </li>
             <!-- Link -->
             <li>
-                <a data-ng-click="header.staticLinkClicked('support');">Support</a>
+                <a data-ng-href="{{header.createStaticLink('support')}}">Support</a>
             </li>
             <li class="dropdown">
 	            <a class="dropdown-toggle">
