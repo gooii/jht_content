@@ -13,5 +13,6 @@ var routes = {
   "terms"                 : "terms_of_use/termsofuse.html",
   "accessibility"         : "accessibility/accessibility.html",
   "privacy"               : "privacy_and_cookies/privacyandcookies.html",
-  "features"              : "support/features.html"
+  "features"              : "support/features.html",
+  "quickref"              : "support/quickref.html"
 };
