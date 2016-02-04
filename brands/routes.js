@@ -14,5 +14,6 @@ var routes = {
   "accessibility"         : "accessibility/accessibility.html",
   "privacy"               : "privacy_and_cookies/privacyandcookies.html",
   "features"              : "support/features.html",
-  "quickref"              : "support/quickref.html"
+  "quickref"              : "support/quickref.html",
+  "witchcraft"            : "features/witchcraft.html"
 };
