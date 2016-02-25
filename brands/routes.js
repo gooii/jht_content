@@ -10,7 +10,7 @@ var routes = {
   "help"                  : "support/help.html",
   "librarians"            : "support/librarians.html",
   "sitemap"               : "about/sitemap.html",
-  "terms"                 : "about/termsofuse.html",
+  "termsofuse"            : "about/termsofuse.html",
   "accessibility"         : "about/accessibility.html",
   "privacy"               : "about/privacy.html",
   "features"              : "support/features.html",
