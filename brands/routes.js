@@ -15,5 +15,7 @@ var routes = {
   "privacy"               : "about/privacy.html",
   "features"              : "support/features.html",
   "quickref"              : "support/quickref.html",
-  "witchcraft"            : "features/witchcraft.html"
+  "witchcraft"            : "features/witchcraft.html",
+  "blcovers"              : "features/blcovers.html",
+  "survey"                : "about/survey.html" 
 };
