@@ -17,5 +17,6 @@ var routes = {
   "quickref"              : "support/quickref.html",
   "witchcraft"            : "features/witchcraft.html",
   "blcovers"              : "features/blcovers.html",
+  "shakespeare"           : "features/shakespeare.html",
   "survey"                : "about/survey.html" 
 };
