@@ -18,5 +18,6 @@ var routes = {
   "witchcraft"            : "features/witchcraft.html",
   "blcovers"              : "features/blcovers.html",
   "shakespeare"           : "features/shakespeare.html",
+  "music"                 : "features/music.html",
   "survey"                : "about/survey.html" 
 };
