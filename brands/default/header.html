@@ -29,8 +29,8 @@
                 <a data-ng-href="{{header.createStaticLink('about')}}">About</a>
             </li>
             <!-- Link with sub options -->
-            <li class="dropdown">
-                <a class="dropdown-toggle">
+            <li class="dropdown" dropdown>
+                <a class="dropdown-toggle" dropdown-toggle>
                     Browse <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu" role="menu">
@@ -43,8 +43,8 @@
             <li>
                 <a data-ng-href="{{header.createStaticLink('support')}}">Support</a>
             </li>
-            <li class="dropdown">
-	            <a class="dropdown-toggle">
+            <li class="dropdown" dropdown>
+	            <a class="dropdown-toggle" dropdown-toggle>
 		            My Texts <span class="caret"></span>
 	            </a>
 	            <ul class="dropdown-menu" role="menu">
@@ -53,8 +53,8 @@
 		            </li>
 	            </ul>
             </li>
-            <li data-ng-repeat="item in header.toolbarExtras" class="dropdown">
-                <a class="dropdown-toggle">
+            <li data-ng-repeat="item in header.toolbarExtras" class="dropdown" dropdown>
+                <a class="dropdown-toggle" dropdown-toggle>
                     <i class="fa fa-lg" data-ng-class="item.icon"></i> <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu" role="menu">
