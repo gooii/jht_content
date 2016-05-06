@@ -19,5 +19,6 @@ var routes = {
   "blcovers"              : "features/blcovers.html",
   "shakespeare"           : "features/shakespeare.html",
   "music"                 : "features/music.html",
+  "maps"                  : "features/maps.html",
   "surveys"               : "about/surveys.html" 
 };
