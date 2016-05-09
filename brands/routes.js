@@ -20,6 +20,6 @@ var routes = {
   "shakespeare"           : "features/shakespeare.html",
   "music"                 : "features/music.html",
   "maps"                  : "features/maps.html",
-  "localondon"            : "features/locallondon.html",
+  "locallondon"            : "features/locallondon.html",
   "surveys"               : "about/surveys.html" 
 };
