@@ -291,36 +291,36 @@
 				<img src="../../images/support/screenshots/fuzzyvariants-700px-ann.jpg" alt="Fuzzy and Variant Forms"/>
                 </span>
 				<h2>Grouping</h2>
-                <p> You can group together terms or search clauses together using parentheses. For example:</p>
+                <p> You can group together terms or search clauses together using parentheses. For example&#58;</p>
                 <pre>shakespeare AND &#40;&#40;merchant AND venice&#41; OR &#40;king AND lear&#41;&#41;</pre>
 
                 <h2>Field searching</h2>
                   <p>You can search specific fields by using the field name followed by a colon then the search term. For example</p>
-                <pre>title_all_text:shakespeare</pre>
-                <p>You can use this in combination with other operators. For example:</p>
-                <pre>title_all_text:(shakespeare lear)</pre>
-                <pre>title_all_text:lear AND author_all_text:shakespeare~2</pre>
+                <pre>title_all_text&#58;shakespeare</pre>
+                <p>You can use this in combination with other operators. For example&#58;</p>
+                <pre>title_all_text&#58;(shakespeare lear)</pre>
+                <pre>title_all_text&#58;lear AND author_all_text:shakespeare~2</pre>
 
                 <p>You can also search for the presence/absence of fields using '_missing_' and '_exists_'. For example to find all texts without edition information:</p>
                 <pre>_missing_:publication.edition.statement</pre>
                 <p>Bibliographic fields supported in the drop down search box menu:</p>
 
          		 <ul>
-          		 <li>All: _all</li>
-                 <li>Title: title_all_text</li>
-                 <li> Author: author_all_text</li>
-                 <li>Publisher/Printer: lifecycle.publication.publisher.name.value_text</li>
-                 <li>Place of publication: lifecycle.publication.place.name.value_text</li>
-                 <li>Bibliographic number: bibliographic_number</li>
-                 <li> Language: language</li>
-                 <li> Subject: subject_all_text</li>
+          		 <li>All&#58; _all</li>
+                 <li>Title&#58; title_all_text</li>
+                 <li> Author&#58; author_all_text</li>
+                 <li>Publisher/Printer&#58; lifecycle.publication.publisher.name.value_text</li>
+                 <li>Place of publication&#58; lifecycle.publication.place.name.value_text</li>
+                 <li>Bibliographic number&#58; bibliographic_number</li>
+                 <li> Language&#58; language</li>
+                 <li> Subject&#58; subject_all_text</li>
                  <li>Genre/Material type: type_or_genre_all_text</li>
-                 <li>Illustration Description: searches both 'physical_descriptors.other' and 'figures'</li>
+                 <li>Illustration Description&#58; searches both 'physical_descriptors.other' and 'figures'</li>
                  </ul>
-                <p>Also dates:</p>
+                <p>Also dates&#58;</p>
                   <ul>
-                  <li>Earliest publication date for text: lifecycle.publication.date.earliest</li>
-                  <li> Latest publication date for text: lifecycle.publication.date.latest</li>
+                  <li>Earliest publication date for text&#58; lifecycle.publication.date.earliest</li>
+                  <li> Latest publication date for text&#58; lifecycle.publication.date.latest</li>
                   </ul>
 
 
@@ -346,7 +346,7 @@
 				
 				<ul>
 				<li>Type &#45; Search on all the texts, or on Periodicals only.</li>
-				<li>Filter by date - included undated, exclude undated, undated only, or specify a date or range</li>
+				<li>Filter by date &#45; included undated, exclude undated, undated only, or specify a date or range</li>
 				<li>Specify which collection or collections to search on</li>
 				<li>Search on Description only, Full Text Only, or both</li>
 				<li>Filter by Illustrated, Not Illustrated, or both</li>
@@ -416,7 +416,7 @@
 			</span>
 			<p>You can click and drag within the Histogram to make a further date range selection within your exisiting results. When you release the mouse, the search results and histogram display will be updated to reflect your new selection.</p>			
 			
-			<p>Please note, it is possible to make searches, or date range selections within a search that make the histogram show a solid block of colour. While it might seem confusing, this is not incorrect - it's just a reflection of the how the results data has been filtered down.</p> 
+			<p>Please note, it is possible to make searches, or date range selections within a search that make the histogram show a solid block of colour. While it might seem confusing, this is not incorrect - it&#39;s just a reflection of the how the results data has been filtered down.</p> 
 			
           <h2>List view / grid view</h2>
             <p>Should you wish, you can toggle between a list view or a tile view of your search results by clicking the List or Tile icon buttons, shown next to the &quot;View Mode&quot; legend. When in Tile view, more results are visible on the screen at any one time, so less bibliographic data for each record is displayed by default. When in either view, click &quot;More Information&quot; to see the full bibliographic data for any given result, then &quot;Less Information&quot; to hide it again.</p>
@@ -433,9 +433,14 @@
                
           <img src="../images/support/screenshots/matches-within-text-700px-ann.png" width="700" height="450" alt="Matches within text"/>
           
-<p>You can click on a thumbnail or image number to go directly to that page of the text in the viewer. You can also select the thumbanil or title for the publication to open the whole publication in the viewer and select the left hand &quot;search&quot; panel, then the "pages" tab to view all of the search term matches as well.</p>
+<p>You can click on a thumbnail or image number to go directly to that page of the text in the viewer. You can also select the thumbanil or title for the publication to open the whole publication in the viewer and select the left hand &quot;search&quot; panel, then the "Pages" tab to view all of the search term matches as well.</p>
                
-            <h2>Ordering results</h2>
+            <h2>EEBO Periodicals display</h2>
+			<p>Publications that are part of a series are displayed differently, to enable you to quickly identify them and navigate the individual issue you require.
+			If you search for a particular periodical e.g. &lsquo;Mercurius Politicus&rsquo;, you&#39;ll see that there is a bibliographic record for the periodical which has a &lsquo;Series&rsquo; thumbnail. Clicking this thumbnail transfers users to the &lsquo;Periodicals&rsquo; tab on the results page where the list of individual issues will be displayed. You can then select an issue to open in the viewer as usual.</p>
+			<p>Individual issues of periodicals are displayed on the &lsquo;Periodicals&rsquo; tab in issue order.</p>
+</p>
+			<h2>Ordering results</h2>
             <p>You can order your search results by Relevance, Date (Ascending), Date (Descending), Author (A-Z), Title (A-Z). The default value is Relevance.</p>
                <span class="image">
 			   <img src="../../images/support/screenshots/browse-results-700px.jpg" alt="Browse search results"/>
@@ -520,14 +525,24 @@
         <img src="../images/support/screenshots/tags-tab-700px-ann.png" width="700" height="450" alt="Tags tab"/>
         
 		<h1 id="download">Downloading </h1>
-          <p>When you have opened a publication in the viewer, choose the &quot;download&quot; button and select from  a range of download options available:</p>
+          <p>When you have opened a publication in the viewer, choose the &quot;Download&quot; button and select from a range of download options. The following options are available for all publications&#58;</p>
           <ul>
-                  <li>individual image currently open in the viewer as a jpeg file</li>
+                  <li>individual image currently open in the viewer as a JPEG file</li>
                   <li>whole publication as a PDF file</li>
-                  <li>citation information in RIS format to import into reference management software</li>
+                  <li>citation information in .RIS format to import into reference management software</li>
           </ul>
-                <p>All of these options provide an instant download of either a jpeg, PDF or RIS format file. These files will either open or download in your browser, depending on the browser you use and your local configuration settings for it. </p>
-                <p>Please note: the download button is only enabled on the navigation bar when you have opened a publication in the viewer. On all other pages it is currently disabled and greyed out with a message stating &quot;feature not available&quot; as you can only download a publication when you have selected and opened it.              </p>
+ 
+				<p>Publications with manually keyed text transcriptions provided by the Text Creation Partnership &#40;TCP&#41; now have the following additional download formats&#58;</p>
+				<ul>
+				<li>XML &#40;This is the TCP markup&#41;</li>
+				<li>ePub</li>
+				<li>HTML</li>
+				<li>Plain text</li>
+				</ul>
+		              
+		      <p>About 64,000 of the EEBO publications have these additional options, and 2000 of the ECCO publications. All of these options provide an instant download of a JPEG, PDF, .RIS, .XML, .ePub, .HTML, or .TXT format file. These files will either open or download in your browser, depending on the browser you use and your local configuration settings for it.</p>		
+				
+                <p>Please note&#58; the Download button is only enabled on the Navigation bar when you have opened a publication in the viewer. On all other pages it is currently disabled and greyed out with a message stating &quot;feature not available&quot; as you can only download a publication when you have selected and opened it.</p>
               <p>
                <span class="image">
 			   <img src="../../images/support/screenshots/download-700px-ann.jpeg" alt="Download button"/>
