@@ -191,33 +191,33 @@
     </table>
 
 
-          <h2>Genre/material type</h2>
-            <p>Genre/material type describes both the form of the item and the content in EEBO. We have merged Genre/material type because in the metadata the physical form and content type are often mixed up and the number of terms are fairly small. The material type in some cases is also treated as a subject term. There are 6 broad types, 21 sub-types (which is a mixture of more specific material type and 'content' type), and over 300 form and genres.</p>
+          <h2>Genre&#47;material type</h2>
+            <p>Genre&#47;material type describes both the form of the item and the content in EEBO. We have merged Genre&#47;material type because in the metadata the physical form and content type are often mixed up and the number of terms are fairly small. The material type in some cases is also treated as a subject term. There are 6 broad types, 21 sub&#45;types &#40;which is a mixture of more specific material type and '&lsquo;content&rsquo; type&#41;, and over 300 form and genres.</p>
 
              <table class="table table-striped">
       <thead>
         <tr>
         <th>Collection</th>
           <th>Type</th>
-          <th>Sub-type</th>
+          <th>Sub&#45;type</th>
           <th>Form and Genre</th>
         </tr>
       </thead>
       <tbody>
         <tr>
         <td>EEBO</td>
-          <td>There are 6 broad types: Book, Periodical, Music, Newspaper, Map and Continuing Resource.</td>
-          <td>There are 21 sub-types including Bibliography, Dictionary, Full score, Legislation...</td>
-          <td>There are over 300 of these including Broadsides, Early works to 1800, Poetry, Sermons, Title pages, Selections, Maps, Map (Single map), Commentaries, Controversial literature, Terminology,  Sources...</td>
+          <td>There are 6 broad types&#58; Book, Periodical, Music, Newspaper, Map and Continuing Resource.</td>
+          <td>There are 21 sub&#45;types including Bibliography, Dictionary, Full score, Legislation...</td>
+          <td>There are over 300 of these including Broadsides, Early works to 1800, Poetry, Sermons, Title pages, Selections, Maps, Map &#40;Single map&#41;, Commentaries, Controversial literature, Terminology,  Sources...</td>
         </tr>
       </tbody>
     </table>
 
-<p>Download the full list of <a href="/files/Genres-in-HT.xlsx" class="external"> genres</a> (XLXS, 501KB).</p>
+<p>Download the full list of <a href="/files/Genres-in-HT.xlsx" class="external"> genres</a> &#40;XLXS, 501KB&#41;.</p>
 
           <h2>Building up complex queries</h2>
             <p>To build up a complex query you can either type your query into the search box directly using boolean operators or use the add another row feature. Simply select  &quot;Advanced Search&quot; on the search page to show additional search features. From here you can add new rows and specify whether your terms MUST, SHOULD or MUST NOT appear in your results.  </p>
-            <p>The first clause of the search (in the main search box) is a MUST - so the results must include whatever goes in that first box. This means that whatever else goes in the search you are essentially starting from a situation where the search in the first box is compulsory. This means that adding a SHOULD clause to this cannot increase the set of results. Adding a SHOULD clause cannot reduce the set of results either (as the clause is optional).</p>
+            <p>The first clause of the search &#40;in the main search box&#41; is a MUST &#45; so the results must include whatever goes in that first box. This means that whatever else goes in the search you are essentially starting from a situation where the search in the first box is compulsory. This means that adding a SHOULD clause to this cannot increase the set of results. Adding a SHOULD clause cannot reduce the set of results either &#40;as the clause is optional&#41;.</p>
 
 <p>This means that adding a SHOULD clause does not change the total number of results. What it does do is re-order the results when using the relevance ranking, so those items matching the SHOULD clauses come to the top.</p>
 
@@ -227,19 +227,19 @@
                
           <h1 id="operators">Operators, regular expressions and reserved characters </h1>
             <h2>Boolean operators</h2>
-            <p>The familiar boolean operators AND, OR, NOT (alternatively you can write them as &amp;&amp;, ||, !) are supported and can be entered directly into the search box. NOT takes precedence over AND, which takes precendence over OR and you can combine these operators with brackets. These operators can affect the terms to the left and right of them.</p>
-            <p>You can also use the prefered Elasticsearch operators '+' (which means the term MUST be present) and '-' (which means the term MUST NOT be present).  These operators can only affect the terms to the right of them.</p>
+            <p>The familiar boolean operators AND, OR, NOT &#40;alternatively you can write them as &amp;&amp;, &#124;&#124;, &#33;&#41; are supported and can be entered directly into the search box. NOT takes precedence over AND, which takes precendence over OR and you can combine these operators with brackets. These operators can affect the terms to the left and right of them.</p>
+            <p>You can also use the prefered Elasticsearch operators &lsquo;&#43;&rsquo; &#40;which means the term MUST be present&#41; and &lsquo;&#45;&rsquo; &#40;which means the term MUST NOT be present&#41;.  These operators can only affect the terms to the right of them.</p>
             <p>The example below finds all results for &quot;shakespeare&quot; without &quot;venice&quot; in.</p>
             <pre>
-                shakespeare -venice</pre>
+                shakespeare &#45;venice</pre>
 
-		  <p>By default, any terms you enter in the search box MUST be present. For instance, all of the searches below are identical:</p>
+		  <p>By default, any terms you enter in the search box MUST be present. For instance, all of the searches below are identical&#58;</p>
             <pre>
-           	shakespeare -venice ode</pre>
+           	shakespeare &#45;venice ode</pre>
 			<pre>
-            	+shakespeare -venice ode</pre>
+            	&#43;shakespeare &#45;venice ode</pre>
 			<pre>
-            	+shakespeare -venice +ode</pre>
+            	&#43;shakespeare &#45;venice &#43;ode</pre>
 
           <h2>Wildcard operators</h2>
             <p>Two wildcard operators are available:</p>
