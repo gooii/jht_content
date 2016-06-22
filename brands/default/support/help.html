@@ -219,7 +219,7 @@
             <p>To build up a complex query you can either type your query into the search box directly using boolean operators or use the add another row feature. Simply select  &quot;Advanced Search&quot; on the search page to show additional search features. From here you can add new rows and specify whether your terms MUST, SHOULD or MUST NOT appear in your results.  </p>
             <p>The first clause of the search &#40;in the main search box&#41; is a MUST &#45; so the results must include whatever goes in that first box. This means that whatever else goes in the search you are essentially starting from a situation where the search in the first box is compulsory. This means that adding a SHOULD clause to this cannot increase the set of results. Adding a SHOULD clause cannot reduce the set of results either &#40;as the clause is optional&#41;.</p>
 
-<p>This means that adding a SHOULD clause does not change the total number of results. What it does do is re-order the results when using the relevance ranking, so those items matching the SHOULD clauses come to the top.</p>
+<p>This means that adding a SHOULD clause does not change the total number of results. What it does do is re&#45;order the results when using the relevance ranking, so those items matching the SHOULD clauses come to the top.</p>
 
 
             <hr />
@@ -242,24 +242,24 @@
             	&#43;shakespeare &#45;venice &#43;ode</pre>
 
           <h2>Wildcard operators</h2>
-            <p>Two wildcard operators are available:</p>
+            <p>Two wildcard operators are available&#58;</p>
             <pre>
-                * = Match any character, including no character
-                ? = Match any single character; will not match no character</pre>
+                &#42; &#61; Match any character, including no character
+                &#63; &#61; Match any single character&#59; will not match no character</pre>
             <p>Please avoid wildcard characters occurring at or before the third position as they may produce too many unrelated matches.</p>
 
           <h2>Proximity operators</h2>
-            <p>Proximity operators enable you to specify the distance (in number of words) your search terms are from each other in the text. You can specify the number using a tilda and a number after the term itself, to widen the proximity increase the number. </p>
+            <p>Proximity operators enable you to specify the distance &#40;in number of words&#41; your search terms are from each other in the text. You can specify the number using a tilda and a number after the term itself, to widen the proximity increase the number. </p>
             <p>The example below finds king and queen within 5 words or less of each other.</p>
             <pre>
-                &quot;king queen&quot;~5
+                &quot;king queen&quot;&#126;5
             </pre>
 
           <h2>Regular expressions</h2>
             <p>Searching using regular expressions is supported and terms can be entered directly into the search box wrapped in forward slashes &quot;/&quot;. Historical Texts uses Elasticsearch software to index the data and the full list of <a href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-regexp-query.html#query-dsl-regexp-query">supported operators for regular expressions</a> can be found on the Elasticsearch website. </p>
             <p>The example below shows a regular expression to look for the word William.</p>
             <pre>
-                /W[ilam]{0,6}/
+                &#47;W&#91;ilam&#93;&#123;0,6&#125;&#47;
             </pre>
             <div class="panel panel-default">
               <div class="panel-heading">
@@ -272,27 +272,27 @@
             <p>Certain characters function as operators in the system and if you want to use them in your search query, but not as an operator, then you will need to escape them with a leading backslash. </p>
             <p>The reserved characters are:</p>
             <pre>
-                + - &amp;&amp; || ! ( ) { } [ ] ^ &quot; ~ * ? : \ /</pre>
+                &#43; &#45; &amp;&amp; &#124;&#124; &#33; &#40; &#41; &#123; &#125; &#91; &#93; &#94; &quot; &#126; &#42; &#63; &#58; &#92; &#47;</pre>
 
 
                 <h2>Fuzzy searching</h2>
                 <p>Fuzzy searching enables you to search for terms that are similar to, but not exactly like our search terms.</p>
-                <p>&quot;Fuzziness&quot; is measured in terms of the number of edits (insertions and deletions) between one term and another. You can specify the number of edits using a tilda and a number after the term itself.</p>
+                <p>&quot;Fuzziness&quot; is measured in terms of the number of edits &#40;insertions and deletions&#41; between one term and another. You can specify the number of edits using a tilda and a number after the term itself.</p>
                 <p>The example below finds &quot;king&quot;, and all other terms within a single edit of the word &quot;king&quot;:</p>
-                <pre>king~1</pre>
+                <pre>king&#126;1</pre>
                 <p>The maximum &quot;fuzziness&quot; supported is 2.<br />
-                  (obviously you can use the &quot;Fuzzy search&quot; checkbox for fuzzy searching but the operator is also supported in the main search box and allows you to apply the &quot;fuzziness&quot; to only certain terms within your search)</p>
+                  &#40;obviously you can use the &quot;Fuzzy search&quot; checkbox for fuzzy searching but the operator is also supported in the main search box and allows you to apply the &quot;fuzziness&quot; to only certain terms within your search&#41;</p>
 				<h2>Variant Forms and Misspelling searching</h2>
 				<p>Users can also choose options for &quot;Variant Forms&quot;, &quot;Variant Spellings&quot;, &quot;Misspellings&quot; and &quot;Printer Replacements&quot; by clicking the &quot;Fuzzy and Variants&quot; drop&#45;down button and ticking the desired options. 
-All the Variant words that are added to the search will appear below the Search bar, colour&#45;coded by Variant type. 
-You can remove Variant words from your search by clicking the &#39;x&#39; at the end of the icon.</p>
-<p>We recommend that users not use both the &#39;Fuzzy&#39; and &#39;Variants&#39; options at the same time, as this may yield unpredictable search results.</p>
+                <br />All the Variant words that are added to the search will appear below the Search bar, colour&#45;coded by Variant type. 
+                You can remove Variant words from your search by clicking the &#39;x&#39; at the end of the icon.</p>
+                <p>We recommend that users not use both the &#39;Fuzzy&#39; and &#39;Variants&#39; options at the same time, as this may yield unpredictable search results.</p>
                 <span class="image">
 				<img src="../../images/support/screenshots/fuzzyvariants-700px-ann.jpg" alt="Fuzzy and Variant Forms"/>
                 </span>
 				<h2>Grouping</h2>
                 <p> You can group together terms or search clauses together using parentheses. For example:</p>
-                <pre>shakespeare AND ((merchant AND venice) OR (king AND lear))</pre>
+                <pre>shakespeare AND &#40;&#40;merchant AND venice&#41; OR &#40;king AND lear&#41;&#41;</pre>
 
                 <h2>Field searching</h2>
                   <p>You can search specific fields by using the field name followed by a colon then the search term. For example</p>
