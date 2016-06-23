@@ -92,7 +92,7 @@
             <p>We are using <a href="http://www.elasticsearch.org">Elasticsearch</a> open source software to index the data in Historical Texts.</p>
             <p>To run a search enter your search terms in the search box and select the &quot;search&quot; button. By default, this will search all of the information in the bibliographic records as well as the full text and you can enter bibliograhic numbers &#40;ESTC number for ECCO, STC or Wing number for EEBO&#41; into the search box when searching over all fields not just the bibliographic number field. The search software is not case sensitive so &quot;Shakespeare&quot; will return the same results as &quot;shakespeare&quot;. The number of matching results will be shown to the right of the search box. </p>
 			<p><i>It is worth noting that you can see where in a publication your search terms match using the &quot;Pages&quot; tab in the &quot;Search&quot; panel, within the Viewer &#45; and that you can then search for new terms within the publication using the search box at the top of the &quot;Pages&quot; tab. For more information, see the section on the <a href="/help#viewer">Viewer</a></i>. 
-            <p>If you do want to limit your search to a particular field e.g. title, author or bibliographic number you can do so using the drop down list to the left of the search box.</p>
+            <p>If you do want to limit your search to a particular field e.g. Title, Author or Bibliographic Number, you can do so using the drop&#45; down list to the left of the Search box.</p>
             <p>The options available are&#58;</p>
             <ul>
               <li>All</li>
@@ -115,15 +115,14 @@
             </pre>
 
           <h2>Bibliographic number 	&#40;STC, Wing and ESTC numbers&#41;</h2>
-            <p>Records in EEBO and ECCO have bibliographic numbers and you can use these to search for specific records in the system. For EEBO there are STC, Wing and Thomason Tract numbers. For ECCO, there are ESTC numbers. The British Library 19th century collection does not have a bibliographic reference number.          </p>
-          <p>You can enter bibliographic numbers directly into the default &quot;All&quot; fields search as well as in the specific bibliographic number search. </p>
-          <p>Please note that you will need to be quite exact when using the bibliographic reference number search, for instance whether you enter a full stop or not along with the identifier will affect the results returned. This issue can be worked around by either using the &quot;All&quot; fields search and just putting the bibliographic number in there &#40;but sometimes this can result in lots of hits&#41;, or by using a wildcard character &#40;&#42;&#41; at the end of the number. </p>
+            <p>Records in EEBO and ECCO have bibliographic numbers, and you can use these to search for specific records in the system. For EEBO there are STC, Wing and Thomason Tract numbers. For ECCO, there are ESTC numbers. The British Library 19th century collection does not have a bibliographic reference number.          </p>
+          <p>You can enter bibliographic numbers directly into the default &quot;All&quot; fields search as well as in the specific &quot;Bibliographic Number&quot; search. </p>
 
               <table class="table table-striped">
       <thead>
         <tr>
         <th>Collection</th>
-          <th>Bibliographic number</th>
+          <th>Bibliographic Number</th>
           <th>Example</th>
           <th>Comments</th>
         </tr>
@@ -139,7 +138,7 @@
           <td>ECCO</td>
           <td>ESTC number</td>
           <td>T067061</td>
-          <td>ESTC numbers sometimes have leading zeros. They are listed without the leading zero on the ESTC site but with them in the bibliographic information provided to Historical Texts, so when searching in Historical Texts you need to include the leading zero&#40;s&#41;, so the format is a letter followed by six numbers.</td>
+          <td>ESTC numbers sometimes have leading zeros. They are listed without the leading zero on the ESTC site but with them in the bibliographic information provided to Historical Texts. As of June 21, 2016, Historical Texts has now been updated so that users can search for them in either format and see the same results.</td>
         </tr>
       </tbody>
     </table>
@@ -216,7 +215,7 @@
 <p>Download the full list of <a href="/files/Genres-in-HT.xlsx" class="external"> genres</a> &#40;XLXS, 501KB&#41;.</p>
 
           <h2>Building up complex queries</h2>
-            <p>To build up a complex query you can either type your query into the search box directly using boolean operators or use the add another row feature. Simply select  &quot;Advanced Search&quot; on the search page to show additional search features. From here you can add new rows and specify whether your terms MUST, SHOULD or MUST NOT appear in your results.  </p>
+            <p>To build up a complex query you can either type your query into the search box directly using boolean operators or use the add another row feature. Simply select  &quot;Advanced Search&quot; on the search page to show additional search features. From here you can add new rows and specify whether your terms MUST, SHOULD or MUST NOT appear in your results.</p>
             <p>The first clause of the search &#40;in the main search box&#41; is a MUST &#45; so the results must include whatever goes in that first box. This means that whatever else goes in the search you are essentially starting from a situation where the search in the first box is compulsory. This means that adding a SHOULD clause to this cannot increase the set of results. Adding a SHOULD clause cannot reduce the set of results either &#40;as the clause is optional&#41;.</p>
 
 <p>This means that adding a SHOULD clause does not change the total number of results. What it does do is re&#45;order the results when using the relevance ranking, so those items matching the SHOULD clauses come to the top.</p>
@@ -296,26 +295,26 @@
 
                 <h2>Field searching</h2>
                   <p>You can search specific fields by using the field name followed by a colon then the search term. For example</p>
-                <pre>title_all_text&#58;shakespeare</pre>
+                <pre>title&#95;all&#95;text&#58;shakespeare</pre>
                 <p>You can use this in combination with other operators. For example&#58;</p>
-                <pre>title_all_text&#58;(shakespeare lear)</pre>
-                <pre>title_all_text&#58;lear AND author_all_text:shakespeare~2</pre>
+                <pre>title&#95;all&#95;text&#58;&#40;shakespeare lear&#41;</pre>
+                <pre>title&#95;all&#95;text&#58;lear AND author&#95;all&#95;text&#58;shakespeare&#126;2</pre>
 
-                <p>You can also search for the presence/absence of fields using '_missing_' and '_exists_'. For example to find all texts without edition information:</p>
-                <pre>_missing_:publication.edition.statement</pre>
-                <p>Bibliographic fields supported in the drop down search box menu:</p>
+                <p>You can also search for the presence&#47;absence of fields using &#39;&#95;missing&#95;&#39; and &#39;&#95;exists&#95;&#39;. For example to find all texts without edition information&#58;</p>
+                <pre>&#95;missing&#95;&#58;publication.edition.statement</pre>
+                <p>Bibliographic fields supported in the drop&#45;down Search box menu:</p>
 
          		 <ul>
-          		 <li>All&#58; _all</li>
-                 <li>Title&#58; title_all_text</li>
-                 <li> Author&#58; author_all_text</li>
-                 <li>Publisher/Printer&#58; lifecycle.publication.publisher.name.value_text</li>
-                 <li>Place of publication&#58; lifecycle.publication.place.name.value_text</li>
-                 <li>Bibliographic number&#58; bibliographic_number</li>
+          		 <li>All&#58; &#95;all</li>
+                 <li>Title&#58; title&#95;all&#95;text</li>
+                 <li> Author&#58; author&#95;all&#95;text</li>
+                 <li>Publisher&#47;Printer&#58; lifecycle.publication.publisher.name.value_text</li>
+                 <li>Place of publication&#58; lifecycle.publication.place.name.value&#95;text</li>
+                 <li>Bibliographic number&#58; bibliographic&#95;number</li>
                  <li> Language&#58; language</li>
-                 <li> Subject&#58; subject_all_text</li>
-                 <li>Genre/Material type: type_or_genre_all_text</li>
-                 <li>Illustration Description&#58; searches both 'physical_descriptors.other' and 'figures'</li>
+                 <li> Subject&#58; subject&#95;all&#95;text</li>
+                 <li>Genre/Material type&#58; type&#95;or&#95;genre&#95;all&#95;text</li>
+                 <li>Illustration Description&#58; searches both &#39;physical&#95;descriptors.other&#39; and &#39;figures&#39;</li>
                  </ul>
                 <p>Also dates&#58;</p>
                   <ul>
@@ -324,24 +323,24 @@
                   </ul>
 
 
-                <h2>Ranges (numeric, date or text)</h2>
-                <p>You can search for numeric, date or text ranges. Inclusive ranges are specified with square brackets [min TO max] and exclusive ranges with curly brackets {min TO max}.</p>
-                <pre>lifecycle.publication.publisher.name.value_text:[aa TO ab]</pre>
-                <p>The example above would find all texts with a word in the publisher that comes between &quot;aa&quot; and &quot;ab&quot; in alphabetical order including occurrences of 'aa' and 'ab'. For example it would find the publication statement:</p>
+                <h2>Ranges &#40;numeric, date or text&#41;</h2>
+                <p>You can search for numeric, date or text ranges. Inclusive ranges are specified with square brackets [min TO max] and exclusive ranges with curly brackets &#123;min TO max&#125;.</p>
+                <pre>lifecycle.publication.publisher.name.value&#95;text&#58;&#91;aa TO ab&#93;</pre>
+                <p>The example above would find all texts with a word in the publisher that comes between &quot;aa&quot; and &quot;ab&quot; in alphabetical order including occurrences of &#39;aa&#39; and &#39;ab&#39;. For example it would find the publication statement&#58;</p>
                 <p>Aat the shop adioyning vnto Saint Mildreds Church in the Pultrye by John Allde </p>
                 <p>Because of the word &quot;Aat&quot;</p>
-                <pre>lifecycle.publication.date.earliest:[* TO 1600}</pre>
-                <p>Finds all texts with an earliest publication date before 1600 (up to 1599).</p>
+                <pre>lifecycle.publication.date.earliest&#58;&#91;&#42; TO 1600&#125;</pre>
+                <p>Finds all texts with an earliest publication date before 1600 &#40;up to 1599&#41;.</p>
                 <p>More details on <a href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#_ranges_2" title="Range searching information on the Elasticsearch website">range searching</a> can be found on the Elasticsearch website. </p>
 
                 <h2>Boosting</h2>
-                <p>Boosting can be used to change the relevance ranking based on specific terms in your search - it won't change the results retrieved, but will change the order. This is done by using the boost operator ^. For example:</p>
-                <pre>shakespeare lear^2</pre>
-                <p>Will boost the importance of 'lear' in the results and so re-order the search set to emphasise those where 'lear' appears more often.</p>
+                <p>Boosting can be used to change the relevance ranking based on specific terms in your search &#45; it won&#39;t change the results retrieved, but will change the order. This is done by using the boost operator &#94;. For example&#58;</p>
+                <pre>shakespeare lear&#94;2</pre>
+                <p>Will boost the importance of &#39;lear&#39; in the results and so re&#45;order the search set to emphasise those where &#39;lear&#39; appears more often.</p>
                 <p>The default boost value is 1, but can be any positive number. A boost value between 0 and 1 reduces relevance of a term.</p>
 
 				<h2>Advanced search</h2>
-				<p>More search options are available, but are hidden by default. To show the extra options, click the &quot;Advanced Search&quot; drop-down button to the right of the page.</p>
+				<p>More search options are available, but are hidden by default. To show the extra options, click the &quot;Advanced Search&quot; drop&#45;down button to the right of the page.</p>
 				<p>The extra options are&#58;</p>
 				
 				<ul>
