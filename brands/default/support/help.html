@@ -90,9 +90,9 @@
             
 
             <p>We are using <a href="http://www.elasticsearch.org">Elasticsearch</a> open source software to index the data in Historical Texts.</p>
-            <p>To run a search enter your search terms in the search box and select the &quot;search&quot; button. By default, this will search all of the information in the bibliographic records as well as the full text and you can enter bibliograhic numbers &#40;ESTC number for ECCO, STC or Wing number for EEBO&#41; into the search box when searching over all fields not just the bibliographic number field. The search software is not case sensitive so &quot;Shakespeare&quot; will return the same results as &quot;shakespeare&quot;. The number of matching results will be shown to the right of the search box. </p>
-			<p><i>It is worth noting that you can see where in a publication your search terms match using the &quot;Pages&quot; tab in the &quot;Search&quot; panel, within the Viewer &#45; and that you can then search for new terms within the publication using the search box at the top of the &quot;Pages&quot; tab. For more information, see the section on the <a href="/help#viewer">Viewer</a></i>. 
-            <p>If you do want to limit your search to a particular field e.g. Title, Author or Bibliographic Number, you can do so using the drop&#45; down list to the left of the Search box.</p>
+            <p>To run a search enter your search terms in the search box and select the &quot;search&quot; button. By default, this will search all of the information in the bibliographic records as well as the full text and you can enter bibliographic numbers &#40;ESTC number for ECCO, STC or Wing number for EEBO&#41; into the Search box when searching over All fields, not just the Bibliographic Number field. The search software is not case&#45;ensitive so &quot;Shakespeare&quot; will return the same results as &quot;shakespeare&quot;. The number of matching results will be shown to the right of the Search box. </p>
+			<p><i>It is worth noting that you can see where in a publication your search terms match using the &quot;Pages&quot; tab in the &quot;Search&quot; panel, within the Viewer &#45; and that you can then search for new terms within the publication using the Search box at the top of the &quot;Pages&quot; tab. For more information, see the section on the <a href="/help#viewer">Viewer</a></i>. 
+            <p>If you do want to limit your search to a particular field e.g. Title, Author or Bibliographic Number, you can do so using the drop&#45;down list to the left of the Search box.</p>
             <p>The options available are&#58;</p>
             <ul>
               <li>All</li>
@@ -224,9 +224,9 @@
             <hr />
 	   
                
-          <h1 id="operators">Operators, regular expressions and reserved characters </h1>
+          <h1 id="operators">Operators, Regular Expressions and Reserved Characters </h1>
             <h2>Boolean operators</h2>
-            <p>The familiar boolean operators AND, OR, NOT &#40;alternatively you can write them as &amp;&amp;, &#124;&#124;, &#33;&#41; are supported and can be entered directly into the search box. NOT takes precedence over AND, which takes precendence over OR and you can combine these operators with brackets. These operators can affect the terms to the left and right of them.</p>
+            <p>The familiar Boolean operators AND, OR, NOT &#40;alternatively you can write them as &amp;&amp;, &#124;&#124;, &#33;&#41; are supported and can be entered directly into the search box. NOT takes precedence over AND, which takes precendence over OR and you can combine these operators with brackets. These operators can affect the terms to the left and right of them.</p>
             <p>You can also use the prefered Elasticsearch operators &lsquo;&#43;&rsquo; &#40;which means the term MUST be present&#41; and &lsquo;&#45;&rsquo; &#40;which means the term MUST NOT be present&#41;.  These operators can only affect the terms to the right of them.</p>
             <p>The example below finds all results for &quot;shakespeare&quot; without &quot;venice&quot; in.</p>
             <pre>
@@ -385,7 +385,7 @@
             <p>To build up a complex query you can either type your query into the search box directly using Boolean operators or use the "New Row" feature. Simply select  &quot;Advanced Search&quot; on the search page to show additional search features. From here you can add new rows by clicking the "New Row" button, and specify whether your terms MUST, SHOULD or MUST NOT appear in your results.  </p>
             <p>The first clause of the search (in the main search box) is a MUST - so the results must include whatever goes in that first box. This means that whatever else goes in the search you are essentially starting from a situation where the search in the first box is compulsory. This means that adding a SHOULD clause to this cannot increase the set of results. Adding a SHOULD clause cannot reduce the set of results either (as the clause is optional).</p>
 
-<p>This means that adding a SHOULD clause does not change the total number of results. What it does do is re-order the results when using the relevance ranking, so those items matching the SHOULD clauses come to the top.</p>
+<p>This means that adding a SHOULD clause does not change the total number of results. What it does do is re&#45;order the results when using the relevance ranking, so those items matching the SHOULD clauses come to the top.</p>
 
 			<h2>Reset button to clear down the search interface</h2>	
 			<p>Should you wish to reset the search interface back to the default values, you can click the red &quot;Reset&quot; button at the bottom of the &quot;Advanced Search&quot; options should you wish. Manually setting the values back to their defaults should work equally well.</p> 
@@ -393,7 +393,7 @@
             <hr />
             
                         <h1 id="browse">Browsing</h1>
-            <p>You can browse (as opposed to search) the entire contents of Historical Texts by Author, Printer&#45;Publisher, Date, Volume, Thomason Tracts and Thomason Tracts Broadsides by clicking the Browse Tab on the Navigation Bar near the top of the screen.</p>
+            <p>You can browse &#40;as opposed to search&#41; the entire contents of Historical Texts by Author, Printer&#45;Publisher, Date, Volume, Thomason Tracts and Thomason Tracts Broadsides by clicking the Browse Tab on the Navigation Bar near the top of the screen.</p>
            
                <span class="image">
 			   <img src="../../images/support/screenshots/browse-auth-700px-ann.jpg" alt="Share button"/>
@@ -408,12 +408,12 @@
 		  <h1 id="results">Results</h1>
           
           <h2>Histogram</h2>
-			<p>Once you've run a search on Historical Texts, a Histogram displaying the date range distribution of your results graphically will be shown above your results list. Number of hits is shown on the Y-axis and time in years is shown on the X-axis.
-			If you don't wish to see the Histogram, you can hide it by clicking the upwards-facing arrow on the Date Range tab.</p>
+			<p>Once you&#39;ve run a search on Historical Texts, a Histogram displaying the date range distribution of your results graphically will be shown above your results list. Number of hits is shown on the Y&#45;axis and time in years is shown on the X&#45axis.
+			If you don&#39;t wish to see the Histogram, you can hide it by clicking the upwards&#45acing arrow on the Date Range tab.</p>
 			<span class="image">
 			<img src="../../images/support/screenshots/histogram-700px.jpg" alt="Histogram showing selector tool"/>
 			</span>
-			<p>You can click and drag within the Histogram to make a further date range selection within your exisiting results. When you release the mouse, the Search Results and Histogram display will be updated to reflect your new selection.</p>			
+			<p>You can click and drag within the Histogram to make a further date range selection within your existing results. When you release the mouse, the Search Results and Histogram display will be updated to reflect your new selection.</p>			
 			
 			<p>Please note, it is possible to make searches, or date range selections within a search that make the Histogram show a solid block of colour. While it might seem confusing, this is not incorrect - it&#39;s just a reflection of the how the results data has been filtered down.</p> 
 			
@@ -422,9 +422,9 @@
              <span class="image">
 			   <img src="../../images/support/screenshots/resultsviewmode-700px.jpg" alt="Results View">
 	      </span>
-            <p>List view:</p>
+            <p>List view&#58;</p>
             <img src="../images/support/screenshots/list-view-700px.gif" width="700" height="428" alt="List view"/>
-			<p>Grid view:</p>
+			<p>Grid view&#58;</p>
             <img src="../images/support/screenshots/grid-view-700px.gif" width="700" height="428" alt="Grid view"/>
             
             <h2 id="matchesintext">Viewing search term matches within a text</h2>
@@ -456,7 +456,7 @@
 			 <h2>Show and hide results page thumbnails</h2>
 			<p>Results page thumbnails are displayed next to each search result on the results page by default. If you don't want to see them you can use the Thumbnails buttons above the filters on the left hand side of the results page to hide them. </p>
             <p>You may wish to do this if you are choosing to view large numbers of results per page e.g. 500 or above, as the page will take longer to load with the thumbnails.</p> 
-            <p>Please note: this setting only applies to viewing thumbnails on the results page, not the thumbnails in the left hand panel in the viewer for each text.</p>
+            <p>Please note&#58; this setting only applies to viewing thumbnails on the results page, not the thumbnails in the left hand panel in the viewer for each text.</p>
             
 			<hr />
           <h1 id="viewer">Viewer</h1>
@@ -549,7 +549,7 @@
               </p>
 
 <h1 id="stable">Stable URLs </h1>
-          <p>The &quot;Share&quot; button on the navigation bar at the top of the screen provides a stable &#40;permanent&#41; URL for the publication you are viewing for you to copy and paste into your documents or web pages. The button is deactivated and greyed out until you open a publication in the viewer, at which point it is enabled and when you select it a dialogue box containing a stable URL for the publication will be displayed. </p>
+          <p>The &quot;Share&quot; button on the Navigation bar at the top of the screen provides a stable &#40;permanent&#41; URL for the publication you are viewing for you to copy and paste into your documents or web pages. The button is deactivated and greyed out until you open a publication in the Viewer, at which point it is enabled and when you select it a dialogue box containing a stable URL for the publication will be displayed. </p>
 
        		   <p>&nbsp;</p>
 
@@ -571,7 +571,7 @@
    
 	<p>You can save searches and publications for future sessions in Historical Texts.</p>
 	<ul>
-  <li><strong>Save searches:</strong> A green &quot;Save Search&quot; button enables you to save your current search. Your saved search can be viewed and run from the &quot;saved searches&quot; option under &quot;My Texts&quot; on the toolbar at the top of the screen.</li>
+  <li><strong>Save searches&#58;</strong> A green &quot;Save Search&quot; button enables you to save your current search. Your saved search can be viewed and run from the &quot;saved searches&quot; option under &quot;My Texts&quot; on the toolbar at the top of the screen.</li>
 <li><strong>Save publications&#58;</strong> You can save publications to a list for future reference by selecting the checkbox next to one or more results from your results list. The publications will be added to the &quot;My Saved Items&quot; tab and from there you can add them to a new list or an existing list. You can also access your saved items from &quot;My Texts&quot; on the toolbar at the top of the screen.</li>
 </ul>
 
