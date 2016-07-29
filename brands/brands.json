@@ -1,1 +1,5 @@
-[]
+[{
+  "id"        : "mhl",
+  "title"     : "Medical History",
+  "url"       : "/mhl"
+}]
