@@ -21,7 +21,7 @@ var routes = {
   "music"                 : "features/music.html",
   "maps"                  : "features/maps.html",
   "locallondon"           : "features/locallondon.html",
-  "surveys"               : "about/surveys.html" ,
-  "christmas"             : "features/christmas.html"
+  "surveys"               : "about/surveys.html",
+  "christmas"             : "features/christmas.html",
   "travel"                : "features/travel.html"
 };
