@@ -19,5 +19,14 @@ var routes = {
   "blcovers"              : "features/blcovers.html",
   "shakespeare"           : "features/shakespeare.html",
   "music"                 : "features/music.html",
-  "surveys"               : "about/surveys.html" 
+  "surveys"               : "about/surveys.html",
+  "leeds"                 : "mhl/collections/leeds.html",
+  "rcse"                  : "mhl/collections/rcse.html",
+  "rcpe"                  : "mhl/collections/rcpe.html",
+  "glasgow"               : "mhl/collections/glasgow.html",
+  "ucl"                   : "mhl/collections/ucl.html",
+  "rcp"                   : "mhl/collections/rcp.html",
+  "tropical"              : "mhl/collections/tropical.html",
+  "kings"                 : "mhl/collections/kings.html",
+  "bristol"               : "mhl/collections/bristol.html"
 };
