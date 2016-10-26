@@ -20,6 +20,7 @@ var routes = {
   "shakespeare"           : "features/shakespeare.html",
   "music"                 : "features/music.html",
   "surveys"               : "about/surveys.html",
+  "wellcome"              : "collections/wellcome.html",
   "leeds"                 : "collections/leeds.html",
   "rcse"                  : "collections/rcse.html",
   "rcpe"                  : "collections/rcpe.html",
