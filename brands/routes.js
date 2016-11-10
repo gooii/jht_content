@@ -29,5 +29,6 @@ var routes = {
   "rcp"                   : "collections/rcp.html",
   "tropical"              : "collections/tropical.html",
   "kings"                 : "collections/kings.html",
-  "bristol"               : "collections/bristol.html"
+  "bristol"               : "collections/bristol.html",
+  "info"                  : "more_information.html"
 };
