@@ -23,5 +23,6 @@ var routes = {
   "locallondon"           : "features/locallondon.html",
   "surveys"               : "about/surveys.html",
   "christmas"             : "features/christmas.html",
-  "travel"                : "features/travel.html"
+  "travel"                : "features/travel.html",
+  "astronomy"             : "features/astronomy.html"
 };
