@@ -24,5 +24,6 @@ var routes = {
   "surveys"               : "about/surveys.html",
   "christmas"             : "features/christmas.html",
   "travel"                : "features/travel.html",
-  "astronomy"             : "features/astronomy.html"
-};
+  "astronomy"             : "features/astronomy.html",
+  "cookery"               : "features/cookery.html"
+  };
