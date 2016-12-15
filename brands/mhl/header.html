@@ -43,16 +43,6 @@
             <li>
                 <a data-ng-href="{{header.createStaticLink('support')}}">Support</a>
             </li>
-            <li class="dropdown">
-	            <a class="dropdown-toggle">
-		            My Texts <span class="caret"></span>
-	            </a>
-	            <ul class="dropdown-menu" role="menu">
-		            <li data-ng-repeat="item in header.myTextsOptions">
-			            <a data-ng-click="item.disabled || item.action($event)" data-ng-class="{disabled: item.disabled}">{{item.display}}</a>
-		            </li>
-	            </ul>
-            </li>
             <li data-ng-repeat="item in header.toolbarExtras" class="dropdown">
                 <a class="dropdown-toggle">
                     <i class="fa fa-lg" data-ng-class="item.icon"></i> <span class="caret"></span>
