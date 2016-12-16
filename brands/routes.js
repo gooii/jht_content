@@ -34,5 +34,7 @@ var routes = {
   "about-mhl"             : "about/about-mhl.html",
   "support-mhl"           : "support/support-mhl.html",
   "help-mhl"              : "support/help-mhl.html",   
-  "quickref-mhl"          : "support/quickref-mhl.html"
+  "quickref-mhl"          : "support/quickref-mhl.html",
+  "faq-mhl"               : "support/faq-mhl",
+  "librarians-mhl"        : "librarians/faq-mhl"
   };
