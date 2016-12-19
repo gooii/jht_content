@@ -30,6 +30,7 @@ var routes = {
   "tropical"              : "collections/tropical.html",
   "kings"                 : "collections/kings.html",
   "bristol"               : "collections/bristol.html",
+<<<<<<< HEAD
   "info"                  : "more_information.html",
   "about-mhl"             : "about/about-mhl.html",
   "support-mhl"           : "support/support-mhl.html",
@@ -37,4 +38,7 @@ var routes = {
   "quickref-mhl"          : "support/quickref-mhl.html",
   "faq-mhl"               : "support/faq-mhl",
   "librarians-mhl"        : "librarians/faq-mhl"
+=======
+  "info"                  : "more_information.html"
+>>>>>>> c30e02b7f175a9c1e66eb6ac4a28b53965cbc874
   };
