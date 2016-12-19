@@ -30,9 +30,5 @@ var routes = {
   "tropical"              : "collections/tropical.html",
   "kings"                 : "collections/kings.html",
   "bristol"               : "collections/bristol.html",
-  "info"                  : "more_information.html",
-  "about-mhl"             : "about/about-mhl.html",
-  "support-mhl"           : "support/support-mhl.html",
-  "help-mhl"              : "support/help-mhl.html",   
-  "quickref-mhl"          : "support/quickref-mhl.html"
+  "info"                  : "more_information.html"
   };
