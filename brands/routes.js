@@ -26,4 +26,6 @@ var routes = {
   "travel"                : "features/travel.html",
   "astronomy"             : "features/astronomy.html",
   "cookery"               : "features/cookery.html"
+  "presentations"         : "about/presentations.html",
+  "events"                : "about/events.html"  
   };
