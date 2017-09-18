@@ -64,11 +64,19 @@
                 </ul>
             </li>
             <!-- Render toolbar items -->
-            <li data-ng-repeat="toolbarItem in header.toolbarItems" data-ng-class="{disabled: toolbarItem.disabled}">
+            <li data-ng-repeat="toolbarItem in header.toolbarItems" data-ng-if="toolbarItem.id !== 'HELP'" data-ng-class="{disabled: toolbarItem.disabled}">
+                    <a data-tooltip-placement="{{toolbarItem.tooltipPlacement}}"
+                        data-tooltip="{{header.getTooltip(toolbarItem.id) || ''}}"
+                        data-ng-click="toolbarItem.disabled || header.toolbarItemClicked(toolbarItem.id)">
+                        <i class="fa fa-lg" data-ng-class="toolbarItem.icon"></i>
+                    </a>
+                </li>
+            <!-- Help page workaround so it can be opened in a new tab -->
+            <li data-ng-repeat="toolbarItem in header.toolbarItems" data-ng-if="toolbarItem.id === 'HELP'" data-ng-class="{disabled: toolbarItem.disabled}">
                 <a data-tooltip-placement="{{toolbarItem.tooltipPlacement}}"
-                             data-tooltip="{{header.getTooltip(toolbarItem.id) || ''}}"
-                            data-ng-click="toolbarItem.disabled || header.toolbarItemClicked(toolbarItem.id)">
-                  <i class="fa fa-lg" data-ng-class="toolbarItem.icon"></i>
+                    data-tooltip="{{header.getTooltip(toolbarItem.id) || ''}}"
+                    data-ng-href="/help">
+                    <i class="fa fa-lg" data-ng-class="toolbarItem.icon"></i>
                 </a>
             </li>
         </ul>
