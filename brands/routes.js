@@ -28,5 +28,6 @@ var routes = {
   "cookery"               : "features/cookery.html",
   "presentations"         : "about/presentations.html",
   "events"                : "about/events.html",
-  "labs"                  : "about/labs.html"    
-  };
+  "labs"                  : "about/labs.html",    
+  "stem"                  : "features/stem.html" 
+};
