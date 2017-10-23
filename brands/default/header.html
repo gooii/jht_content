@@ -44,14 +44,14 @@
                 <a data-ng-href="{{header.createStaticLink('support')}}">Support</a>
             </li>
             <li class="dropdown">
-	            <a class="dropdown-toggle">
-		            My Texts <span class="caret"></span>
-	            </a>
-	            <ul class="dropdown-menu" role="menu">
-		            <li data-ng-repeat="item in header.myTextsOptions">
-			            <a data-ng-click="item.disabled || item.action($event)" data-ng-class="{disabled: item.disabled}">{{item.display}}</a>
-		            </li>
-	            </ul>
+	              <a class="dropdown-toggle">
+		                My Texts <span class="caret"></span>
+	              </a>
+	              <ul class="dropdown-menu" role="menu">
+		                <li data-ng-repeat="item in header.myTextsOptions">
+			                  <a data-ng-click="item.disabled || item.action($event)" data-ng-class="{disabled: item.disabled}">{{item.display}}</a>
+		                </li>
+	              </ul>
             </li>
             <li data-ng-repeat="item in header.toolbarExtras" class="dropdown">
                 <a class="dropdown-toggle">
@@ -65,17 +65,19 @@
             </li>
             <!-- Render toolbar items -->
             <li data-ng-repeat="toolbarItem in header.toolbarItems" data-ng-if="toolbarItem.id !== 'HELP'" data-ng-class="{disabled: toolbarItem.disabled}">
-                    <a data-tooltip-placement="{{toolbarItem.tooltipPlacement}}"
-                        data-tooltip="{{header.getTooltip(toolbarItem.id) || ''}}"
-                        data-ng-click="toolbarItem.disabled || header.toolbarItemClicked(toolbarItem.id)">
-                        <i class="fa fa-lg" data-ng-class="toolbarItem.icon"></i>
-                    </a>
-                </li>
+                <a data-tooltip-placement="{{toolbarItem.tooltipPlacement}}"
+                   data-tooltip="{{header.getTooltip(toolbarItem.id) || ''}}"
+                   data-tooltip-trigger
+                   data-ng-click="toolbarItem.disabled || header.toolbarItemClicked(toolbarItem.id)">
+                    <i class="fa fa-lg" data-ng-class="toolbarItem.icon"></i>
+                </a>
+            </li>
             <!-- Help page workaround so it can be opened in a new tab -->
             <li data-ng-repeat="toolbarItem in header.toolbarItems" data-ng-if="toolbarItem.id === 'HELP'" data-ng-class="{disabled: toolbarItem.disabled}">
                 <a data-tooltip-placement="{{toolbarItem.tooltipPlacement}}"
-                    data-tooltip="{{header.getTooltip(toolbarItem.id) || ''}}"
-                    data-ng-href="/help">
+                   data-tooltip="{{header.getTooltip(toolbarItem.id) || ''}}"
+                   data-tooltip-trigger
+                   data-ng-href="/help">
                     <i class="fa fa-lg" data-ng-class="toolbarItem.icon"></i>
                 </a>
             </li>

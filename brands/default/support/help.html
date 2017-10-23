@@ -17,8 +17,8 @@
                         <li><a href="/help#searchpanel">Search panel</a></li>
                         <li><a href="/help#imagepanel">Image panel</a></li>
                         <li><a href="/help#detailspanel">Details panel</a></li>
-                        </li>
-						</ul>
+                        </ul>
+                        </li>    
                         <li><a href="/help#download">Downloading</a></li>
                         <li><a href="/help#stable">Stable URLs</a></li>
                         <li><a href="/help#save">Saving searches and publications</a></li>
@@ -39,15 +39,16 @@
                 <li class="active">Help</li>
             </ol>
 
-
-		  <h1 id="navbar">Navigation bar</h1>
+          <h1>Help file</h1>
+		  
+          <p>This is the Help page for the Historical Texts service. It is intended to assist researchers using the Historical Texts service.</p>
+		  
+		  <h2 id="navbar">Navigation bar</h2>
             <p>There is a black horizontal navigation bar at the top&#45;right of the screen on every page of Historical Texts so you can quickly navigate to any part of the website from any page you are on. Some options are only be available on certain pages though, for example the Download, Print and Share buttons  are only enabled when you have opened a publication.</p>
 
-			<span class="image">
-			<img src="../../images/support/screenshots/navigationbar-700px.jpg" alt="Screenshot of the Navigation Bar"/>
-			</span>
+			<a href="../../images/support/screenshots/navigationbar-1920px.jpg" target="_self"><img src="../../images/support/screenshots/navigationbar-700px.jpg" alt="Screenshot of the Navigation Bar"/></a>
 
-		  <h1 id="collections">Features by collection</h1>
+		  <h2 id="collections">Features by collection</h2>
             <p>Not all features are available for each collection. The search and display features we can provide depend on the data and bibliographic information provided to us, which varies by collection. The table below indicates where those differences lie so you know what&#39;s available for each collection.</p>
             <table class="table table-striped">
                 <thead>
@@ -85,8 +86,12 @@
                 </tr>
                 </tbody>
             </table>
-        
-       	  <h1 id="search">Searching</h1>
+            
+            <p>You can find out more about the differing features by collection in Historical Texts by viewing our screencast on the differences between the collections below&#58;</p>
+                    <iframe width="700" height="394" src="//www.youtube.com/embed/-waNiyP6jmo?rel=0&vq=hd720" frameborder="0" allowfullscreen></iframe>
+            
+            
+       	  <h2 id="search">Searching</h2>
             
 
             <p>We are using <a href="http://www.elasticsearch.org">Elasticsearch</a> open source software to index the data in Historical Texts.</p>
@@ -212,10 +217,10 @@
       </tbody>
     </table>
 
-<p>Download the full list of <a href="/files/Genres-in-HT.xlsx" class="external"> genres</a> &#40;XLXS, 501KB&#41;.</p>
+<p>Download the full list of <a href="/files/Genres-in-HT.xlsx" target="_self"> genres</a> &#40;XLXS, 501KB&#41;.</p>
 
           <h2>Building up complex queries</h2>
-            <p>To build up a complex query you can either type your query into the search box directly using boolean operators or use the add another row feature. Simply select  &quot;Advanced Search&quot; on the search page to show additional search features. From here you can add new rows and specify whether your terms MUST, SHOULD or MUST NOT appear in your results.</p>
+            <p>To build up a complex query you can either type your query into the search box directly using boolean operators or use the add another row feature. Simply select &quot;Advanced Search&quot; on the search page to show additional search features. From here you can add new rows and specify whether your terms MUST, SHOULD or MUST NOT appear in your results.</p>
             <p>The first clause of the search &#40;in the main search box&#41; is a MUST &#45; so the results must include whatever goes in that first box. This means that whatever else goes in the search you are essentially starting from a situation where the search in the first box is compulsory. This means that adding a SHOULD clause to this cannot increase the set of results. Adding a SHOULD clause cannot reduce the set of results either &#40;as the clause is optional&#41;.</p>
 
 <p>This means that adding a SHOULD clause does not change the total number of results. What it does do is re&#45;order the results when using the relevance ranking, so those items matching the SHOULD clauses come to the top.</p>
@@ -224,7 +229,7 @@
             <hr />
 	   
                
-          <h1 id="operators">Operators, Regular Expressions and Reserved Characters </h1>
+          <h2 id="operators">Operators, Regular Expressions and Reserved Characters </h2>
             <h2>Boolean operators</h2>
             <p>The familiar Boolean operators AND, OR, NOT &#40;alternatively you can write them as &amp;&amp;, &#124;&#124;, &#33;&#41; are supported and can be entered directly into the search box. NOT takes precedence over AND, which takes precendence over OR and you can combine these operators with brackets. These operators can affect the terms to the left and right of them.</p>
             <p>You can also use the prefered Elasticsearch operators &lsquo;&#43;&rsquo; &#40;which means the term MUST be present&#41; and &lsquo;&#45;&rsquo; &#40;which means the term MUST NOT be present&#41;.  These operators can only affect the terms to the right of them.</p>
@@ -286,9 +291,9 @@
                 <br />All the Variant words that are added to the search will appear below the Search bar, colour&#45;coded by Variant type. 
                 You can remove Variant words from your search by clicking the &#39;x&#39; at the end of the icon.</p>
                 <p>We recommend that users not use both the &#39;Fuzzy&#39; and &#39;Variants&#39; options at the same time, as this may yield unpredictable search results.</p>
-                <span class="image">
-				<img src="../../images/support/screenshots/fuzzyvariants-700px-ann.jpg" alt="Screenshot showing the Fuzzy and Variants options that can be selected in the drop down menu"/>
-                </span>
+
+				<a href="../../images/support/screenshots/fuzzyvariants-1920px.jpg" target="_self"><img src="../../images/support/screenshots/fuzzyvariants-700px.jpg" alt="Screenshot showing the Fuzzy and Variants options that can be selected in the drop down menu"/></a>
+
 				<h2>Grouping</h2>
                 <p> You can group together terms or search clauses together using parentheses. For example&#58;</p>
                 <pre>shakespeare AND &#40;&#40;merchant AND venice&#41; OR &#40;king AND lear&#41;&#41;</pre>
@@ -353,9 +358,14 @@
 				<li>Reset button to clear down the search interface</li>
                 </ul>   
 				
-				<span class="image">
-				<img src="../../images/support/screenshots/advancedsearch-700px.jpg" alt="Screenshot showing the additional options available when Advanced Search is expanded"/>
-				</span>
+				<a href="../../images/support/screenshots/advancedsearch-1920px.jpg" target="_self"><img src="../../images/support/screenshots/advancedsearch-700px.jpg" alt="Screenshot showing the additional options available when Advanced Search is expanded"/></a>
+            
+            <br />
+            
+                <p>You can find out more about the Advanced Search features on Historical Texts by viewing our screencast on Advanced Search below&#58;</p>
+            
+                <iframe width="700" height="394" src="//www.youtube.com/embed/E20y4Mu5iHI?rel=0&vq=hd720" frameborder="0" allowfullscreen></iframe>
+
 				<h2>Text type &#45; Periodicals search</h2>
 				<p>By default all text types will be searched automatically. To specify searching on Periodicals only, click the Periodicals button.
 				<br />Selecting the Periodicals button allows for finer graduations of date range to be entered into the Date Range field, in the format DD&#47;MM&#47;YYYY&#45;DD&#47;MM&#47;YYYY, e.g. 16&#47;1&#47;1642&#45;16&#47;10&#47;1653.
@@ -364,7 +374,7 @@
 				<p>By default, searches will return data from all available date ranges. Clicking the drop&#45;down arrow and selecting the radio button next to the date range field allows users to select from &quot;Including Undated&quot;, &quot;Excluding Undated&quot; or &quot;Undated Only&quot; options.</p>
 				<p>&quot;Including Undated&quot; is the default for searching. It also allows for undated records to be included alongside dated records matching a specified range as entered into the date range field &#40;e.g. 1600&#45;1645 plus any undated records matching the other search terms&#41;.</p>
 				<p>&quot;Excluding Undated&quot; will return only dated records matching a specified range as entered into the field &#40;e.g. 1600&#45;1645&#41;.</p>
-				<p>&quot;Undated only&quot; will return only records with no date</P>
+				<p>&quot;Undated only&quot; will return only records with no date</p>
 				<p><i>Please note that the &quot;Including Undated&quot;, &quot;Excluding Undated&quot; and &quot;Undated only&quot; Date Filter options are not available when the Periodicals button is selected.</i></p>
 				<p>Individual years can be entered into the date range field, as can hyphenated ranges &#40;e.g. 1600&#45;1645&#41;.</p>
 				<p><i>Selecting specific collections will have an effect on the returned results&#39; date range. Users can also use the Selector tool on the Histogram to further refine their search results by date range.</i></p>
@@ -392,92 +402,119 @@
 			
             <hr />
             
-                        <h1 id="browse">Browsing</h1>
+                        <h2 id="browse">Browsing</h2>
             <p>You can browse &#40;as opposed to search&#41; the entire contents of Historical Texts by Author, Date, Printer&#45;Publisher, Thomason Tracts and Thomason Tracts Broadsides by clicking the Browse Tab on the Navigation Bar near the top of the screen.</p>
            
-               <span class="image">
-			   <img src="../../images/support/screenshots/browse-auth-700px-ann.jpg" alt="Screenshot showing the Browse by Author option for the whole Historical Texts collection"/>
-			   </span>
+			 <a href="../../images/support/screenshots/browse-auth-1920px.jpg" target="_self"><img src="../../images/support/screenshots/browse-auth-700px.jpg" alt="Screenshot showing the Browse by Author option for the whole Historical Texts collection"/></a>
               <br />
 			  <br />
 			  <p>You can also browse <strong>within</strong> the results of any search by Author, Printer&#47;Publisher, Date, Periodicals or Thomason Tracts by clicking the tabs along the top of the list of search results.
 			  </p>
               <span class="image">
-			   <img src="../../images/support/screenshots/browse-results-700px.jpg" alt="Screenshot showing how to browse within the results of a search using the tabs along the top"/>
+              <a href="../../images/support/screenshots/browse-results-1920px.jpg" target="_self"><img src="../../images/support/screenshots/browse-results-700px.jpg" alt="Screenshot showing how to browse within the results of a search using the tabs along the top"/></a>
                <hr />
                
-		  <h1 id="results">Results</h1>
+		  <h2 id="results">Results</h2>
           
           <h2>Histogram</h2>
-			<p>Once you&#39;ve run a search on Historical Texts, a Histogram displaying the date range distribution of your results graphically will be shown above your results list. Number of hits is shown on the Y&#45;axis and time in years is shown on the X&#45axis.
-			If you don&#39;t wish to see the Histogram, you can hide it by clicking the upwards&#45acing arrow on the Date Range tab.</p>
-			<span class="image">
-			<img src="../../images/support/screenshots/histogram-700px.jpg" alt="Screenshot showing the Histogram, with the selector tool"/>
-			</span>
+			<p>Once you&#39;ve run a search on Historical Texts, a Histogram displaying the date range distribution of your results graphically will be shown above your results list. Number of hits is shown on the Y&#45;axis and time in years is shown on the X&#45;axis.
+			If you don&#39;t wish to see the Histogram, you can hide it by clicking the upwards&#45;acing arrow on the Date Range tab.</p>
+			<a href="../../images/support/screenshots/histogram-1920px.jpg" target="_self"><img src="../../images/support/screenshots/histogram-700px.jpg" alt="Screenshot showing the Histogram, with the selector tool"/></a>
+                  
+            <br />
+            <br />      
+                  
 			<p>You can click and drag within the Histogram to make a further date range selection within your existing results. When you release the mouse, the Search Results and Histogram display will be updated to reflect your new selection.</p>			
 			
 			<p>Please note, it is possible to make searches, or date range selections within a search that make the Histogram show a solid block of colour. While it might seem confusing, this is not incorrect - it&#39;s just a reflection of the how the results data has been filtered down.</p> 
 			
           <h2>List view &#45; Grid view</h2>
             <p>Should you wish, you can toggle between a list view or a grid view of your search results by clicking the List or Grid icon buttons, shown next to the &quot;View Mode&quot; legend. When in Grid view, more results are visible on the screen at any one time, so less bibliographic data for each record is displayed by default. When in either view, click &quot;More Information&quot; to see the full bibliographic data for any given result, then &quot;Less Information&quot; to hide it again.</p>
-             <span class="image">
-			   <img src="../../images/support/screenshots/resultsviewmode-700px.jpg" alt="Screenshot showing the View Mode buttons for the search results view">
-	      </span>
+
+			 <a href="../../images/support/screenshots/resultsviewmode-1920px.jpg" target="_self"><img src="../../images/support/screenshots/resultsviewmode-700px.jpg" alt="Screenshot showing the View Mode buttons for the search results view"></a>
+                  
+            <br />
+                  <br />
             <p>List view&#58;</p>
-            <img src="../images/support/screenshots/list-view-700px.gif" width="700" height="428" alt="Screenshot showing search results in the List view"/>
-			<p>Grid view&#58;</p>
-            <img src="../images/support/screenshots/grid-view-700px.gif" width="700" height="428" alt="Screenshot showing search results in the Grid view"/>
+                  <br />
+            <a href="../../images/support/screenshots/list-view-1920px.jpg" target="_self"><img src="../images/support/screenshots/list-view-700px.jpg" alt="Screenshot showing search results in the List view"/></a>
+			
+            <br />
+                  <br />
+            <p>Grid view&#58;</p>
+                  
+            <br />
+            <a href="../../images/support/screenshots/grid-view-1920px.jpg" target="_self"><img src="../images/support/screenshots/grid-view-700px.jpg" alt="Screenshot showing search results in the Grid view"/></a>
             
+                  
+                  
             <h2 id="matchesintext">Viewing search term matches within a text</h2>
             <p>Beneath each search result on the results page is a &quot;matches within text&quot; link. Click on this to display pages where your search terms match within the publication. If &quot;Showing 0 matching image&#40;s&#41; out of 0&quot; is displayed instead then this may be due to the matches being in the bibliographic information, for example the title or author, instead of the full text. </p>
                
-          <img src="../images/support/screenshots/matches-within-text-700px-ann.png" width="700" height="450" alt="Screenshot showing the Matches within text feature expanded under a search result"/>
-          
+          <a href="../../images/support/screenshots/matches-within-text-1920px.jpg" target="_self"><img src="../images/support/screenshots/matches-within-text-700px.jpg" alt="Screenshot showing the Matches within text feature expanded under a search result"/></a>
+            <br />      
+            <br />
 <p>You can click on a thumbnail or image number to go directly to that page of the text in the viewer. You can also select the thumbanil or title for the publication to open the whole publication in the viewer and select the left hand &quot;Search&quot; panel, then the &quot;Pages&quot; tab to view all of the search term matches as well.</p>
                
             <h2>EEBO Periodicals display</h2>
 			<p>Publications that are part of a series are displayed differently, to enable you to quickly identify them and navigate the individual issue you require.
 			If you search for a particular periodical e.g. &lsquo;Mercurius Politicus&rsquo;, you&#39;ll see that there is a bibliographic record for the periodical which has a &lsquo;Series&rsquo; thumbnail. Clicking this thumbnail transfers users to the &lsquo;Periodicals&rsquo; tab on the results page where the list of individual issues will be displayed. You can then select an issue to open in the viewer as usual.</p>
 			<p>Individual issues of periodicals are displayed on the &lsquo;Periodicals&rsquo; tab in issue order.</p>
-</p>
-			<h2>Ordering results</h2>
+
+			<h2>Sorting and ordering results</h2>
             <p>You can order your search results by Relevance, Date &#40;Ascending&#41;, Date &#40;Descending&#41;, Author &#40;A&#45;Z&#41;, Title &#40;A&#45;Z&#41;. The default value is Relevance.</p>
-               <span class="image">
-			   <img src="../../images/support/screenshots/reorder-results-700px.jpg" alt="Screenshot showing the options within the Sort By drop down menu that can be used to reorder search results"/>
-			   </span>
+
+              <a href="../../images/support/screenshots/reorder-results-1920px.jpg" target="_self"><img src="../../images/support/screenshots/reorder-results-700px.jpg" alt="Screenshot showing the options within the Sort By drop down menu that can be used to reorder search results"/></a>
+
             <h2>Filtering results</h2>
 			<p>You can filter down the results of an existing search using the Printer&#47;Publisher, Author, Date, Subject, Text Type, Genre and Collection filters on the left hand side of the screen.</p>
+                                 
+              <a href="../../images/support/screenshots/filter1-1920px.jpg" target="_self"><img src="../../images/support/screenshots/filter1-700px.jpg" alt="Screenshot showing the results filter options"/></a>
+
+                  <br />
+                  <br />
+                  
+              <a href="../../images/support/screenshots/filter2-1920px.jpg" target="_self"><img src="../../images/support/screenshots/filter2-700px.jpg" alt="Screenshot showing the results filter options, expanded"/></a>
+                  
+                  <br />
+                                    <br />
                
+                  <p>You can find out more about how to filter your search results in Historical Texts by viewing our screencast below&#58;</p>
+                                    <br />
+                  
+                <iframe width="700" height="394" src="//www.youtube.com/embed/t_UcwhEKm1g?rel=0&vq=hd720" frameborder="0" allowfullscreen></iframe>
+                  
+                  
             <h2>Number of results displayed</h2>
 			<p>You can also change the number of results shown per page using the drop&#45;down arrow under the histogram, and navigate through your pages of results with the results navigation toolbar shown at the bottom of each page. You may want to hide the thumbnails on the results page if you are viewing 500 or above results per page as the page will take longer to load with the thumbnails. See the section below on how to do this.</p> 
 			   
-			   <span class="image">
-			   <img src="../../images/support/screenshots/resultsviewmode-700px.jpg" alt="Screenshot showing the Results per Page option for search results">
-			   </span>
+			   <a href="../../images/support/screenshots/resultsperpage-1920px.jpg" target="_self"><img src="../../images/support/screenshots/resultsperpage-700px.jpg" alt="Screenshot showing the Results per Page option for search results"></a>
+
 			 <h2>Show and hide results page thumbnails</h2>
 			<p>Results page thumbnails are displayed next to each search result on the results page by default. If you don't want to see them you can use the Thumbnails buttons above the filters on the left hand side of the results page to hide them. </p>
             <p>You may wish to do this if you are choosing to view large numbers of results per page e.g. 500 or above, as the page will take longer to load with the thumbnails.</p> 
             <p>Please note&#58; this setting only applies to viewing thumbnails on the results page, not the thumbnails in the left hand panel in the viewer for each text.</p>
-            
+            <a href="../../images/support/screenshots/thumbs-on-off-1920px.jpg" target="_self"><img src="../../images/support/screenshots/thumbs-on-off-700px.jpg" alt="Screenshot showing the option to turn results thumbnails on or off"></a>
 			<hr />
-          <h1 id="viewer">Viewer</h1>
+          <h2 id="viewer">Viewer</h2>
+                  
+                  <p>You can view a screencast about the Viewer and its features here&#58;</p>
+                  
+                <iframe width="700" height="394" src="//www.youtube.com/embed/NZBV0Aty-Co?rel=0&vq=hd720" frameborder="0" allowfullscreen></iframe>
+                  
                 <p>To view the page images for a text simply select a record from your results list or the browse pages by clicking on the thumbnail or title hyperlink for it. This will open up the viewer, enabling you to view images, full text &#40;where available&#41; and thumbnails side by side. Using the navigation bar at the top of the screen, you can also download individual images &#40;JPEGs&#41; and whole publications &#40;PDFs&#41; and bibliographic citation information &#40;RIS&#41; and get a permanent URL for the publication when viewing an image.</p>
                 <p>The viewer is comprised of three panels: a central panel displaying the images and a search panel to the left and a details panel to the right which are collapsed by default. To open the left hand panel select the &quot;Search&quot; button on the left hand side of the viewer and to open the right hand panel select the &quot;Details&quot; button on the right of the viewer as shown in the screenshot below.</p>
 
-              <p>
-               <span class="image">
-			   <img src="../../images/support/screenshots/viewer-closed-700px-ann.jpg" alt="Screenshot of a publication opened in the Viewer, with the side panels closed"/>
-			   </span>
-              </p>
+			   <a href="../../images/support/screenshots/viewer-closed-1920px.jpg" target="_self"><img src="../../images/support/screenshots/viewer-closed-700px.jpg" alt="Screenshot of a publication opened in the Viewer, with the side panels closed"/></a>
 
+              <br /> 
+                                    <br />
               <p>You can have all three panels open at the same time, or just one or two of them and you can re-size the panels by dragging the handle in the middle of the panel edge &#40;highlighted by red boxes with arrows in the screenshot below&#41; to the left or right. To close either panel click on the cross at the top of the panel edges, highlighted by the small red boxes in the screenshot below.</p>
 
-         	 <p>
-               <span class="image">
-			   <img src="../../images/support/screenshots/viewer-open-700px-ann.jpg" alt="Screenshot of a publication opened in the Viewer, with the both side panels open"/>
-			   </span>
-          </p>
+			   <a href="../../images/support/screenshots/viewer-open-1920px.jpg" target="_self"><img src="../../images/support/screenshots/viewer-open-700px.jpg" alt="Screenshot of a publication opened in the Viewer, with the both side panels open"/></a>
 
+             <br />
+                                    <br />
              <p>The options available on each of the three panels are listed below.</p>
 
           <h2 id="imagepanel">Image panel </h2>
@@ -492,39 +529,40 @@
                 </ul>
                 <p>You can use your mouse wheel or trackpad to zoom in and out instead of using the zoom in&#47;out buttons if you prefer and you can drag the image around using your mouse or trackpad.</p>
 				<p>You can navigate through the publication using the navigation toolbar to the bottom of the screen. Here you can move forwards or backwards by page, jump to the start or end of a text, toggle between a single page or two pages reading view, or type a page number in the box and jump directly to that page. These will stay visible even if you switch to the full screen view using the left hand toolbar.</p>
-          <img src="../images/support/screenshots/viewer-centre-700px.png" width="700" height="450" alt="Screenshot of the Zoom, Rotate and Full Screen controls in the Viewer"/>
+          <a href="../../images/support/screenshots/viewer-centre-1920px.jpg" target="_self"><img src="../images/support/screenshots/viewer-centre-700px.jpg" alt="Screenshot of the Zoom, Rotate and Full Screen controls in the Viewer"/></a>
+              
 			<h2 id="searchpanel">Search panel </h2>
             
           <p>To open the search panel, select the &quot;Search&quot; button on the left had side of the viewer. You can re&#45;size the panel by dragging the handle in the middle of the panel edge across to the right and you can close the panel using the cross at the top of the panel edge. There are three tabs providing options for navigating publications:</p>
-          <h3 id="pagestab">Pages tab</h3>
+          <h2 id="pagestab">Pages tab</h2>
           <p>Pages &#45; this lists images matching your search terms so you can select one to jump straight to that image. You can also enter new search terms into the box on the Pages tab to search <i>within the text itself</i>, then click any of the results below to jump to the relevant page in the Image Panel. You can order these results in either &quot;Pages Ascending&quot; or &quot;Page Descending&quot; using the drop&#45;down arrow as required as  well as select to search for variants and or illustrated pages using the drop down box beneath the search box.</p>
-          <img src="../images/support/screenshots/variants-viewer-700px-ann.png" width="700" height="451" alt="Screenshot of the Pages tab within the Search Panel in the Viewer"/>
-		  <h3 id="thumbstab">Thumbnails tab</h3>
+          <a href="../../images/support/screenshots/variants-viewer-1920px.jpg" target="_self"><img src="../images/support/screenshots/variants-viewer-700px.jpg" alt="Screenshot of the Pages tab within the Search Panel in the Viewer"/></a>
+		  <h2 id="thumbstab">Thumbnails tab</h2>
           <p>This tab displays thumbnail images for every image in the publication. 30 are loaded at a time and as you scroll down additional thumbnails will continue to load until you reach the end of the publication. Simply click on a thumbnail image to jump directly to that image in the central viewer panel.</p>
-          <img src="../images/support/screenshots/thumb-tab-700px.png" width="696" height="454" alt="Screenshot of the  Thumbnails tab within the Search Panel in the Viewer"/>
-          <h3 id="pubstab">Publications tab</h3>
+          <a href="../../images/support/screenshots/thumb-tab-1920px.jpg" target="_self"><img src="../images/support/screenshots/thumb-tab-700px.jpg" alt="Screenshot of the  Thumbnails tab within the Search Panel in the Viewer"/></a>
+          <h2 id="pubstab">Publications tab</h2>
 <p>The publications tab displays all of the other publications in Historical Texts that match your search terms, so you can quickly jump to a different publication from within the viewer instead of returning to the results page to select another text.</p>
-        <img src="../images/support/screenshots/publications-tab-700px.png" width="700" height="450" alt="Screenshot of the Publications tab within the Search Panel in the Viewer"/>
+        <a href="../../images/support/screenshots/publications-tab-1920px.jpg" target="_self"><img src="../images/support/screenshots/publications-tab-700px.jpg" alt="Screenshot of the Publications tab within the Search Panel in the Viewer"/></a>
 
 		<h2 id="detailspanel">Details panel</h2>
 
            <p>To open the details panel click on the &quot;details&quot; button on the right hand side of the viewer. You can re&#45;size the panel by dragging the handle in the middle of the panel edge across to the left and you can close the panel using the cross at the top of the panel edge. There are four buttons providing additional information on the publication: details, contents, text and tags.</p>
-         <h3 id="detailstab">Details</h3>       
+         <h2 id="detailstab">Details</h2>       
          <p>The details button displays the bibliographic information for a publication.</p>
-         <img src="../images/support/screenshots/details-tab-700px.png" width="700" height="450" alt="Screenshot of the Details tab within the Details Panel in the Viewer"/>
-		 <h3>Contents</h3>
+         <a href="../../images/support/screenshots/details-tab-1920px.jpg" target="_self"><img src="../images/support/screenshots/details-tab-700px.jpg" alt="Screenshot of the Details tab within the Details Panel in the Viewer"/></a>
+		 <h2>Contents</h2>
          <p>The table of contents feature is currently in development, so this button is disabled, but it will be available soon.</p>
-         <h3 id="texttab">Text</h3>
+         <h2 id="texttab">Text</h2>
 		 <p>The text button displays the full text supporting the images, where available.You can also navigate through the publication using the navigation toolbar to the top of this tab. Here you can move forwards or backwards by page, jump to the start or end of a text, toggle between a single page or two pages reading view. This might be preferable for users who primarily want to read from the full text rather than the images.</p>
          <p>Please note that full text is not available for all publications in Historical Texts. Publications with full text present will display a &quot;T&quot; icon in a grey square under &quot;details&quot; button when the panel is minimised. There is full text available for every title in ECCO and the BL 19th Century collections and this has been machine generated using Optical Character Recognition &#40;OCR&#41; software. There is full text for around a third of the EEBO collection currently and this has been manually keyed by the Text Creation Partnership. For the rest of the EEBO collection there are images and bibliographic information only. When full text is not available the full text tab will display the message &quot;Full text not available&quot;.</p>
-         <img src="../images/support/screenshots/text-tag-700px.png" width="700" height="450" alt="Screenshot of the Text tab within the Details Panel in the Viewer"/>
-		<h3 id="tagstab">Tags</h3>
+         <a href="../../images/support/screenshots/text-tab-1920px.jpg" target="_self"><img src="../images/support/screenshots/text-tab-700px.jpg" alt="Screenshot of the Text tab within the Details Panel in the Viewer"/></a>
+		<h2 id="tagstab">Tags</h2>
         <p>The tags button enables you to create and view tags for indivdiual pages within the publication you are viewing. To create a tag open the page you want tag in the viewer and enter a name for the tag in the box at the top of the tags screen and click on the &quot;add tag&quot; button. The tag will be displayed below, along with any other tags you have created in the publication. Click on the page number for any tag to jump directly to that page.</p>
         <p> To view all of your tags for all publications select the &quot;My Texts&quot; then &quot;My Tags&quot; option from the black navigation bar at the top of the screen.</p>
         <p>Please note&#58; The My Tags feature requires logging in with an institutional account via the UK Federation &#40;Shibboleth and OpenAthens&#41; and is not available if you have accessed Historical Texts via IP authentication.</p>
-        <img src="../images/support/screenshots/tags-tab-700px-ann.png" width="700" height="450" alt="Screenshot of the Tags tab within the Details Panel in the Viewer"/>
+        <a href="../../images/support/screenshots/tags-tab-1920px.jpg" target="_self"><img src="../images/support/screenshots/tags-tab-700px.jpg" alt="Screenshot of the Tags tab within the Details Panel in the Viewer"/></a>
         
-		<h1 id="download">Downloading </h1>
+		<h2 id="download">Downloading </h2>
           <p>When you have opened a publication in the viewer, choose the &quot;Download&quot; button and select from a range of download options. The following options are available for all publications&#58;</p>
           <ul>
                   <li>individual image currently open in the viewer as a JPEG file</li>
@@ -543,32 +581,24 @@
 		      <p>About 45,000 of the EEBO publications have these additional options, and 2000 of the ECCO publications. All of these options provide an instant download of a JPEG, PDF, .RIS, .XML, .ePub, .HTML, or .TXT format file. These files will either open or download in your browser, depending on the browser you use and your local configuration settings for it.</p>		
 				
                 <p>Please note&#58; the Download button is only enabled on the Navigation bar when you have opened a publication in the viewer. On all other pages it is currently disabled and greyed out with a message stating &quot;feature not available&quot; as you can only download a publication when you have selected and opened it.</p>
-              <p>
-               <span class="image">
-			   <img src="../../images/support/screenshots/downloads-700px-ann.jpg" alt="Screenshot of the Download drop down menu expanded, showing the available options for the current publication in the Viewer"/>
-			   </span>
-              </p>
 
-<h1 id="stable">Stable URLs </h1>
+			   <a href="../../images/support/screenshots/downloads-1920px.jpg" target="_self"><img src="../../images/support/screenshots/downloads-700px.jpg" alt="Screenshot of the Download drop down menu expanded, showing the available options for the current publication in the Viewer"/></a>
+
+<h2 id="stable">Stable URLs </h2>
           <p>The &quot;Share&quot; button on the Navigation bar at the top of the screen provides a stable &#40;permanent&#41; URL for the publication you are viewing for you to copy and paste into your documents or web pages. The button is deactivated and greyed out until you open a publication in the Viewer, at which point it is enabled and when you select it a dialogue box containing a stable URL for the publication will be displayed. </p>
 
        		   <p>&nbsp;</p>
 
-              <p>
-               <span class="image">
-			   <img src="../../images/support/screenshots/share-700px-ann.jpeg" alt="Screenshot of the Share button in the Viewer"/>
-			   </span>
-              </p>
-
+			   <a href="../../images/support/screenshots/share-1920px.jpg" target="_self"><img src="../../images/support/screenshots/share-700px.jpg" alt="Screenshot of the Share button in the Viewer"/></a>
+                                 <br />
+                  
        		   <p>When you select the button the dialogue box below will open, displaying a stable URL for the publication for you to copy and paste into a web page or document&#58;              </p>
-   		      <p>
-               <span class="image">
-			   <img src="../../images/support/screenshots/share-url-700px.jpg" alt="Screenshot of a Stable URL for a publication, displayed after the Share button was clicked"/>
-			   </span>
-              </p>
+                  <br />
+                  
+			   <a href="../../images/support/screenshots/share-url-1920px.jpg" target="_self"><img src="../../images/support/screenshots/share-url-700px.jpg" alt="Screenshot of a Stable URL for a publication, displayed after the Share button was clicked"/></a>
 
 
-    <h1 id="save">Saving searches and publications</h1>
+    <h2 id="save">Saving searches and publications</h2>
    
 	<p>You can save searches and publications for future sessions in Historical Texts.</p>
 	<ul>
@@ -582,21 +612,26 @@
 <p>&quot;My Saved Items&quot; will display any collections you have previously made. You can make new ones by clicking the green &quot;Create New Collection&quot; button, and name it by clicking the blue &quot;Edit&quot; button and typing in the name field. Once editing, additional buttons for &quot;Save&quot; and &quot;Cancel&quot; will appear. Unsaved changes will not be applied. You can delete collections if you need by clicking the red &quot;Delete&quot; button to the right of the page.</p>
 <p>Personalisation options are only available when logging in via an institutional account &#40;UK Federation Shibboleth&#47;OpenAthens&#41;. If you access Historical Texts directly &#40;i.e. using IP authentication&#41; then you will be prompted to login with an institutional account when you click on &quot;save search&quot;, &quot;My Saved Items&quot; or an option under &quot;My Texts&quot;. </p>
 
- <p>
-               <a class="image">
-			   <img src="../../images/support/screenshots/personalisation1-700px-ann.jpg" alt="Screenshot showing the My Saved Items tab above a list of search results"/>
-			   </a></p>
- <p>
-               <a class="image">
-			   <img src="../../images/support/screenshots/personalisation2-700px-ann.jpg" alt="Screenshot showing the options available in the expanded My Texts drop down menu"/>
-			   </a></p>
+			   <a href="../../images/support/screenshots/personalisation1-1920px.jpg" target="_self"><img src="../../images/support/screenshots/personalisation1-700px.jpg" alt="Screenshot showing the My Saved Items tab above a list of search results"/></a>
+                  
+                  <br />
+                  <br />
 
+			   <a href="../../images/support/screenshots/personalisation2-1920px.jpg" target="_self"><img src="../../images/support/screenshots/personalisation2-700px.jpg" alt="Screenshot showing the options available in the expanded My Texts drop down menu"/></a>
+                  <br />
+                                    <br />
+<p>You can find out more about saved searches and publications by viewing our screencast on Personalisation options in Historical Texts below&#58;</p>
+                      <br />              
+<iframe width="700" height="394" src="//www.youtube.com/embed/b37RxPEvtXU?rel=0&vq=hd720" frameborder="0" allowfullscreen></iframe>
 			   
- <h1 id="settings">Setting default search and display preferences</h1>
+ <h2 id="settings">Setting default search and display preferences</h2>
 	<p>You can set default search preferences for future sessions if you access the service using an institutional account &#40;Shibboleth&#47;OpenAthens&#41; rather than IP authentication. To do this select the Settings Cog icon on the Navigation bar.</p>
     
-    <img src="../images/support/screenshots/settings-cog-700px.jpg" width="700" height="50" alt="Screenshot highlighting the Cog icon on the navigation, used to access personalisation options"/>
+    <a href="../../images/support/screenshots/settings-cog-1920px.jpg" target="_self"><img src="../images/support/screenshots/settings-cog-700px.jpg" alt="Screenshot highlighting the Cog icon on the navigation, used to access personalisation options"/></a>
     
+                  <br />                  
+                  <br />
+                  
 <p>The options are&#58;</p>
 	<ul>
   <li>Advanced search panel&#58; Open&#47;Closed</li>
@@ -604,7 +639,7 @@
   <li>Select collection to search&#58; choose one or more checkboxes for EEBO, ECCO or the BL 19th century</li>
     </ul>
     <p>Simply choose the options you want and click on the close button. If you experience any problems using these options then try the &quot;Reset&quot; button to reset your preferences back to the default settings and try again.</p>
-    <img src="../images/support/screenshots/Settings.png" width="700" height="400" alt="Screenshot showing the available personalisation options after the Cog icon has been clicked"/> 
+    <a href="../../images/support/screenshots/settings-1920px.jpg" target="_self"><img src="../images/support/screenshots/settings-700px.jpg" alt="Screenshot showing the available personalisation options after the Cog icon has been clicked"/></a>
     <!--start hide
      <h1 id="cite">Citing Historical Texts</h1>
 	<p>When citing publications in Historical Texts we suggest you include the publication details for the print source as well as the details for the online version. You can download citation information in RIS format for import into third-party bibliographic referencing tools.</p>
