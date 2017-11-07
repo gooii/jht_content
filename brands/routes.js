@@ -29,5 +29,6 @@ var routes = {
   "presentations"         : "about/presentations.html",
   "events"                : "about/events.html",
   "labs"                  : "about/labs.html",    
-  "stem"                  : "features/stem.html" 
+  "stem"                  : "features/stem.html",
+  "comedy"                : "features/comedy.html"
 };
