@@ -30,5 +30,6 @@ var routes = {
   "events"                : "about/events.html",
   "labs"                  : "about/labs.html",    
   "stem"                  : "features/stem.html",
-  "comedy"                : "features/comedy.html"
+  "comedy"                : "features/comedy.html",
+  "browser"               : "about/browser.html" 
 };
