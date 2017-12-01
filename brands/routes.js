@@ -31,5 +31,8 @@ var routes = {
   "labs"                  : "about/labs.html",    
   "stem"                  : "features/stem.html",
   "comedy"                : "features/comedy.html",
-  "browser"               : "about/browser.html" 
+  "browser"               : "about/browser.html",
+  "opencookery"           : "features/opencookery.html",
+  "opentravel"            : "features/opentravel.html", 
+  "openfitness"           : "features/openfitness.html"
 };
