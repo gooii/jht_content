@@ -71,7 +71,8 @@
 		      </li>
 	      </ul>
       </li>
-      <li data-ng-repeat="item in header.toolbarExtras" class="dropdown">
+      <li data-ng-repeat="item in header.toolbarExtras" class="dropdown"
+          data-ng-class="{disabled: item.disabled}">
         <a class="dropdown-toggle">
           <i class="fa fa-lg" data-ng-class="item.icon"></i> <span class="caret"></span>
         </a>
