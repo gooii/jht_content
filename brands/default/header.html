@@ -8,6 +8,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
+    <!-- Link to search app -->
     <a class="navbar-brand" data-ng-href="{{header.homeLink}}">
       <img data-ng-src="/images/header/logo.png"/>
     </a>
@@ -15,10 +16,10 @@
   <!-- Back to results link: Only visible if we came from a search -->
   <ul data-ng-if="header.backToResults.visible" class="nav navbar-nav fixed-left ng-scope">
     <li>
-      <a data-ng-href="{{header.backToResults.url}}"
-         class="back-to-search ng-scope"
-         data-tooltip-placement="bottom"
-         data-tooltip="Back to search results">
+      <a data-tooltip-placement="bottom"
+                   data-ng-href="{{header.backToResults.url}}"
+                          class="back-to-search ng-scope"
+                   data-tooltip="Back to search results">
         <span class="icon">
           <i class="fa fa-angle-double-left fa-2x"></i>
         </span>
@@ -30,11 +31,11 @@
     <ul class="nav navbar-nav navbar-right">
       <!-- Link to Search App -->
       <li>
-        <a data-ng-href="{{header.homeLink}}{{header.brand.url}}">Home</a>
+        <a data-ng-href="{{header.homeLink}}">Home</a>
       </li>
-      <!-- Link to Front Page App -->
+      <!-- Link to About -->
       <li>
-        <a data-ng-href="{{header.createStaticLink('about')}}">About</a>
+        <a data-ng-href="{{header.aboutLink}}">About</a>
       </li>
       <!-- Link with sub options -->
       <li class="dropdown">
@@ -42,13 +43,12 @@
           Browse <span class="caret"></span>
         </a>
         <ul class="dropdown-menu" role="menu">
-          <li data-ng-repeat="link in header.browseLinks"
-              class="{{link.class}}"
-              title="{{link.title}}"
-              data-ng-class="{disabled: link.disabled}">
-            <a data-ng-if="link.url.length > 0"
-               data-ng-href="{{link.url}}"
-               data-ng-disabled="link.disabled">
+          <li data-ng-repeat="link in header.browseLinks track by $index"
+                       class="{{link.class}}"
+                       title="{{link.title}}"
+               data-ng-class="{disabled: link.disabled}">
+            <a data-ng-disabled="link.disabled"
+                   data-ng-href="{{link.url}}">
               {{link.display}}
             </a>
           </li>
@@ -56,56 +56,56 @@
       </li>
       <!-- Link -->
       <li>
-        <a data-ng-href="{{header.createStaticLink('support')}}">Support</a>
+        <a data-ng-href="{{header.supportLink}}">Support</a>
       </li>
       <li class="dropdown">
 	      <a class="dropdown-toggle">
 		      My Texts <span class="caret"></span>
 	      </a>
 	      <ul class="dropdown-menu" role="menu">
-		      <li data-ng-repeat="item in header.myTextsOptions">
-			      <a data-ng-click="item.disabled || item.action($event)"
+		      <li data-ng-repeat="item in header.myTextsOptions track by $index">
+            <!-- Only executes the item's action fn if disabled is false and
+                 there is an action property otherwise falls back on ng-href -->
+			      <a data-ng-click="(item.disabled && item.action) || item.action($event)"
+                data-ng-href="{{item.link}}"
                data-ng-class="{disabled: item.disabled}">
               {{item.display}}
             </a>
 		      </li>
 	      </ul>
       </li>
-      <li data-ng-repeat="item in header.toolbarExtras" class="dropdown"
-          data-ng-class="{disabled: item.disabled}">
+      <!-- Render toobar items (icons with drop down menu options) -->
+      <li data-ng-repeat="item in header.toolbarExtras track by $index"
+                   class="dropdown"
+           data-ng-class="{disabled: item.disabled}">
         <a class="dropdown-toggle">
           <i class="fa fa-lg" data-ng-class="item.icon"></i> <span class="caret"></span>
         </a>
         <ul class="dropdown-menu" role="menu">
-          <li data-ng-repeat="item in item.children" title="{{item.title}}">
-            <a data-ng-click="item.action()">
+          <li data-ng-repeat="item in item.children track by $index" title="{{item.title}}">
+            <a data-ng-click="item.action($event)">
               {{item.title}}
             </a>
           </li>
         </ul>
       </li>
-      <!-- Render toolbar items -->
-      <li data-ng-repeat="toolbarItem in header.toolbarItems"
-          data-ng-if="toolbarItem.id !== 'HELP'"
-          data-ng-class="{disabled: toolbarItem.disabled}">
-        <a data-ng-class="toolbarItem.id | lowercase"
-           class="toolbar-item"
-           data-tooltip-placement="{{toolbarItem.tooltipPlacement}}"
-           data-tooltip="{{header.getTooltip(toolbarItem.id) || ''}}"
-           data-tooltip-trigger
-           data-ng-click="toolbarItem.disabled || header.toolbarItemClicked(toolbarItem.id)">
+      <!-- Render toolbar items (icons) -->
+      <li data-ng-repeat="toolbarItem in header.toolbarItems track by $index"
+           data-ng-class="{disabled: toolbarItem.disabled}">
+        <a data-tooltip-trigger class="toolbar-item"
+               data-tooltip-placement="{{toolbarItem.tooltipPlacement}}"
+                        data-ng-class="toolbarItem.id | lowercase"
+                         data-tooltip="{{toolbarItem.tooltip}}"
+                        data-ng-click="toolbarItem.disabled || toolbarItem.action($event)">
           <i class="fa fa-lg" data-ng-class="toolbarItem.icon"></i>
         </a>
       </li>
       <!-- Help page workaround so it can be opened in a new tab -->
-      <li data-ng-repeat="toolbarItem in header.toolbarItems"
-          data-ng-if="toolbarItem.id === 'HELP'"
-          data-ng-class="{disabled: toolbarItem.disabled}">
-        <a data-tooltip-placement="{{toolbarItem.tooltipPlacement}}"
-           data-tooltip="{{header.getTooltip(toolbarItem.id) || ''}}"
-           data-tooltip-trigger
-           data-ng-href="/help">
-          <i class="fa fa-lg" data-ng-class="toolbarItem.icon"></i>
+      <li>
+        <a data-tooltip-trigger data-ng-href="{{header.helpLink.url}}"
+                      data-tooltip-placement="{{header.helpLink.tooltipPlacement}}"
+                                data-tooltip="{{header.helpLink.tooltip}}">
+          <i class="fa fa-lg" data-ng-class="header.helpLink.icon"></i>
         </a>
       </li>
     </ul>
