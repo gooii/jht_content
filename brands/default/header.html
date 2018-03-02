@@ -78,10 +78,21 @@
       <li data-ng-repeat="item in header.toolbarExtra track by $index"
                    class="dropdown"
            data-ng-class="{disabled: item.disabled}">
-        <a class="dropdown-toggle">
+        <!-- thanks angular -->
+        <a data-tooltip-trigger data-ng-if="item.children.length > 0"
+                                     class="dropdown-toggle"
+                    data-tooltip-placement="{{item.tooltipPlacement}}"
+                              data-tooltip="{{item.tooltip}}">
           <i class="fa fa-lg" data-ng-class="item.icon"></i> <span class="caret"></span>
         </a>
-        <ul class="dropdown-menu" role="menu">
+        <!-- thanks again angular -->
+        <a data-tooltip-trigger data-ng-if="item.children.length == 0"
+                                     class=""
+                    data-tooltip-placement="{{item.tooltipPlacement}}"
+                              data-tooltip="{{item.tooltip}}">
+          <i class="fa fa-lg" data-ng-class="item.icon"></i> <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" role="menu" data-ng-show="item.children.length > 0">
           <li data-ng-repeat="item in item.children track by $index" title="{{item.title}}">
             <a data-ng-click="item.action($event)">
               {{item.title}}
