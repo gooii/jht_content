@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html lang="en">
 <div class="row">
 <div class="col-xs-12 topSpace">
         <div class="sideMenu">
@@ -42,7 +42,7 @@
 
           <h1>Help file</h1>
 		  
-          <p>This is the Help page for the Historical Texts service. It is intended to assist researchers using the Historical Texts service.</p>
+          <p>This is the Help page for the Historical &amp;Texts service. It is intended to assist researchers using the Historical Texts service.</p>
 		  
 		  <h2 id="navbar">Navigation bar</h2>
             <p>There is a black horizontal navigation bar at the top&#45;right of the screen on every page of Historical Texts so you can quickly navigate to any part of the website from any page you are on. Some options are only be available on certain pages though, for example the Download and Share buttons are only enabled when you have opened a publication.</p>
@@ -63,9 +63,9 @@
                 <tbody>
                 <tr>
                     <td>Full text </td>
-                    <td>There is now full text available for around 40% of  EEBO titles  manually created by the Text Creation Partnership &#40;TCP&#41; and is the same text that powers the ProQuest EEBO platform. Additional full text will continue to be added to Historical Texts as it become available from the TCP. The full text available is formatted text. If full text is available for a record then the text &quot;Full Text&quot; will be displayed below the search result on the results page.</td>
-                    <td><p>There is machine generated Optical Character Recognition &#40;OCR&#41; full text for every title in the collection provided to us by Cengage. It is the same text that powers the Cengage ECCO platform but we have exposed it in the interface so you can compare the images and supporting text yourself. The full text available is unformatted text.</p>
-                    <p>The Text Creation Partnership have also produced 2000 manually keyed full text transcriptions for ECCO. Tthese records have been added to Historical Texts and replace the existing Optical Character Recognition &#40;OCR&#41; full text for these records, providing improved searching for these publications.</p></td>
+                    <td>There is now full text available for around 40&#37; of  EEBO titles  manually created by the Text Creation Partnership &#40;TCP&#41; and is the same text that powers the ProQuest EEBO platform. Additional full text will continue to be added to Historical Texts as it become available from the TCP. The full text available is formatted text. If full text is available for a record then the text &quot;Full Text&quot; will be displayed below the search result on the results page.</td>
+                    <td>There is machine generated Optical Character Recognition &#40;OCR&#41; full text for every title in the collection provided to us by Cengage. It is the same text that powers the Cengage ECCO platform but we have exposed it in the interface so you can compare the images and supporting text yourself. The full text available is unformatted text. <br><br>
+					The Text Creation Partnership have also produced 2000 manually keyed full text transcriptions for ECCO. These records have been added to Historical Texts and replace the existing Optical Character Recognition &#40;OCR&#41; full text for these records, providing improved searching for these publications.</td>
                     <td>There is full text for  every title in the collection. The text is machine generated using Optical Character Recognition &#40;OCR&#41; software and provided to us by the British Library.  The full text available is unformatted text.</td>
                 </tr>
                 <tr>
@@ -97,8 +97,8 @@
             
 
             <p>We are using <a href="http://www.elasticsearch.org">Elasticsearch</a> open source software to index the data in Historical Texts.</p>
-            <p>To run a search enter your search terms in the search box and select the &quot;search&quot; button. By default, this will search all of the information in the bibliographic records as well as the full text and you can enter bibliographic numbers &#40;ESTC number for ECCO, STC or Wing number for EEBO&#41; into the Search box when searching over All fields, not just the Bibliographic Number field. The search software is not case&#45;ensitive so &quot;Shakespeare&quot; will return the same results as &quot;shakespeare&quot;. The number of matching results will be shown to the right of the Search box. </p>
-			<p><i>It is worth noting that you can see where in a publication your search terms match using the &quot;Pages&quot; tab in the &quot;Search&quot; panel, within the Viewer &#45; and that you can then search for new terms within the publication using the Search box at the top of the &quot;Pages&quot; tab. For more information, see the section on the <a href="/help#viewer">Viewer</a></i>. 
+            <p>To run a search enter your search terms in the search box and select the &quot;search&quot; button. By default, this will search all of the information in the bibliographic records as well as the full text and you can enter bibliographic numbers &#40;ESTC number for ECCO, STC or Wing number for EEBO&#41; into the Search box when searching over All fields, not just the Bibliographic Number field. The search software is not case-sensitive so &quot;shakespeare&quot; will return the same results as &quot;Shakespeare&quot;. The number of matching results will be shown to the right of the Search box. </p>
+			<p><i>It is worth noting that you can see where in a publication your search terms match using the &quot;Pages&quot; tab in the &quot;Search&quot; panel, within the Viewer &#45; and that you can then search for new terms within the publication using the Search box at the top of the &quot;Pages&quot; tab. For more information, see the section on the <a href="/help#viewer">Viewer</a></i>.</p> 
             <p>If you do want to limit your search to a particular field e.g. Title, Author or Bibliographic Number, you can do so using the drop&#45;down list to the left of the Search box.</p>
             <p>The options available are&#58;</p>
             <ul>
@@ -122,7 +122,7 @@
             </pre>
 
           <h2>Bibliographic number 	&#40;STC, Wing and ESTC numbers&#41;</h2>
-            <p>Records in EEBO and ECCO have bibliographic numbers, and you can use these to search for specific records in the system. For EEBO there are STC, Wing and Thomason Tract numbers. For ECCO, there are ESTC numbers. The British Library 19th century collection does not have a bibliographic reference number.          </p>
+            <p>Records in EEBO and ECCO have bibliographic numbers, and you can use these to search for specific records in the system. For EEBO there are STC, Wing and Thomason Tract numbers. For ECCO, there are ESTC numbers. The British Library 19th century collection and the UK Medical Heritage Library do not have bibliographic reference numbers.</p>
           <p>You can enter bibliographic numbers directly into the default &quot;All&quot; fields search as well as in the specific &quot;Bibliographic Number&quot; search. </p>
 
               <table class="table table-striped">
@@ -233,26 +233,26 @@
                
           <h2 id="operators">Operators, Regular Expressions and Reserved Characters </h2>
             <h2>Boolean operators</h2>
-            <p>The familiar Boolean operators AND, OR, NOT &#40;alternatively you can write them as &amp;&amp;, &#124;&#124;, &#33;&#41; are supported and can be entered directly into the search box. NOT takes precedence over AND, which takes precendence over OR and you can combine these operators with brackets. These operators can affect the terms to the left and right of them.</p>
-            <p>You can also use the prefered Elasticsearch operators &lsquo;&#43;&rsquo; &#40;which means the term MUST be present&#41; and &lsquo;&#45;&rsquo; &#40;which means the term MUST NOT be present&#41;.  These operators can only affect the terms to the right of them.</p>
-            <p>The example below finds all results for &quot;shakespeare&quot; without &quot;venice&quot; in.</p>
+            <p>The familiar Boolean operators AND, OR, NOT &#40;alternatively you can write them as &amp;&amp;, &#124;&#124;, &#33;&#41; are supported and can be entered directly into the search box. NOT takes precedence over AND, which takes precedence over OR and you can combine these operators with brackets. These operators can affect the terms to the left and right of them.</p>
+            <p>You can also use the preferred Elasticsearch operators &lsquo;&#43;&rsquo; &#40;which means the term MUST be present&#41; and &lsquo;&#45;&rsquo; &#40;which means the term MUST NOT be present&#41;.  These operators can only affect the terms to the right of them.</p>
+            <p>The example below finds all results for &quot;Shakespeare&quot; without &quot;Venice&quot; in.</p>
             <pre>
-                shakespeare &#45;venice</pre>
+                Shakespeare -Venice</pre>
 
 		  <p>By default, any terms you enter in the search box MUST be present. For instance, all of the searches below are identical&#58;</p>
             <pre>
-           	shakespeare &#45;venice ode</pre>
+           	Shakespeare -Venice ode</pre>
 			<pre>
-            	&#43;shakespeare &#45;venice ode</pre>
+            	&#43;Shakespeare -Venice ode</pre>
 			<pre>
-            	&#43;shakespeare &#45;venice &#43;ode</pre>
+            	&#43;Shakespeare -Venice &#43;ode</pre>
 
-          <h2>Wildcard operators</h2>
-            <p>Two wildcard operators are available&#58;</p>
+          <h2>Wild card operators</h2>
+            <p>Two wild card operators are available&#58;</p>
             <pre>
                 &#42; &#61; Match any character, including no character
                 &#63; &#61; Match any single character&#59; will not match no character</pre>
-            <p>Please avoid wildcard characters occurring at or before the third position as they may produce too many unrelated matches.</p>
+            <p>Please avoid wild card characters occurring at or before the third position as they may produce too many unrelated matches.</p>
 
           <h2>Proximity operators</h2>
             <p>Proximity operators enable you to specify the distance &#40;in number of words&#41; your search terms are from each other in the text. You can specify the number using a tilda and a number after the term itself, to widen the proximity increase the number. </p>
@@ -298,14 +298,14 @@
 			
 		<h2>Grouping</h2>
                 <p> You can group together terms or search clauses together using parentheses. For example&#58;</p>
-                <pre>shakespeare AND &#40;&#40;merchant AND venice&#41; OR &#40;king AND lear&#41;&#41;</pre>
+                <pre>Shakespeare AND &#40;&#40;merchant AND -Venice&#41; OR &#40;king AND lear&#41;&#41;</pre>
 
                 <h2>Field searching</h2>
                   <p>You can search specific fields by using the field name followed by a colon then the search term. For example</p>
-                <pre>title&#95;all&#95;text&#58;shakespeare</pre>
+                <pre>title&#95;all&#95;text&#58;Shakespeare</pre>
                 <p>You can use this in combination with other operators. For example&#58;</p>
-                <pre>title&#95;all&#95;text&#58;&#40;shakespeare lear&#41;</pre>
-                <pre>title&#95;all&#95;text&#58;lear AND author&#95;all&#95;text&#58;shakespeare&#126;2</pre>
+                <pre>title&#95;all&#95;text&#58;&#40;Shakespeare lear&#41;</pre>
+                <pre>title&#95;all&#95;text&#58;lear AND author&#95;all&#95;text&#58;Shakespeare&#126;2</pre>
 
                 <p>You can also search for the presence&#47;absence of fields using &#39;&#95;missing&#95;&#39; and &#39;&#95;exists&#95;&#39;. For example to find all texts without edition information&#58;</p>
                 <pre>&#95;missing&#95;&#58;publication.edition.statement</pre>
@@ -342,8 +342,8 @@
 
                 <h2>Boosting</h2>
                 <p>Boosting can be used to change the relevance ranking based on specific terms in your search &#45; it won&#39;t change the results retrieved, but will change the order. This is done by using the boost operator &#94;. For example&#58;</p>
-                <pre>shakespeare lear&#94;2</pre>
-                <p>Will boost the importance of &#39;lear&#39; in the results and so re&#45;order the search set to emphasise those where &#39;lear&#39; appears more often.</p>
+                <pre>Shakespeare lear&#94;2</pre>
+                <p>Will boost the importance of &#39;lear&#39; in the results and so re&#45;order the search set to emphasize those where &#39;lear&#39; appears more often.</p>
                 <p>The default boost value is 1, but can be any positive number. A boost value between 0 and 1 reduces relevance of a term.</p>
 
 				<h2>Advanced search</h2>
@@ -408,10 +408,10 @@
 			<a href="../images/support/screenshots/browse-authOA-1920px.jpg" target="_self"><img src="../images/support/screenshots/browse-authOA-700px.jpg" alt="screen shot showing browse options from tool bar" title="screenshot showing browse options from toolbar"></a>
 			<br />
 			  <br />
-			  <p>You can also browse <strong>within</strong> the results of any search by Author, Printer&#47;Publisher, Date, Periodicals or Thomason Tracts by clicking the tabs along the top of the list of search results.
+			  <p>You can also browse <strong>within</strong> the results of any search by Author, Printer&#47;Publisher, Periodicals or Thomason Tracts by clicking the tabs along the top of the list of search results.
 			  </p>
               <span class="image">
-              <a href ="../images/support/screenshots/browse-resultsOA-1920px.jpg"><img src="../images/support/screenshots/browse-resultsOA-700px.jpg" alt="Screenshot showing how to browse within the results of a search using the tabs along the top" title="Screenshot showing how to browse within the results of a search using the tabs along the top"></a>
+              <a href ="../images/support/screenshots/browse-resultsOA-1920px.jpg"><img src="../images/support/screenshots/browse-resultsOA-700px.jpg" alt="Screenshot showing how to browse within the results of a search using the tabs along the top" title="Screenshot showing how to browse within the results of a search using the tabs along the top"></a></span>
 <hr />
                
 		  <h2 id="results">Results</h2>
@@ -453,7 +453,7 @@
           <a href="../images/support/screenshots/matches-within-textOA-1920px.jpg" target="_self"><img src="../images/support/screenshots/matches-within-textOA-700px.jpg" alt="Screenshot showing the Matches within text feature expanded under a search result" title="Screenshot showing the Matches within text feature expanded under a search result"></a>
             <br />      
             <br />
-<p>You can click on a thumbnail or image number to go directly to that page of the text in the viewer. You can also select the thumbanil or title for the publication to open the whole publication in the viewer and select the left hand &quot;Search&quot; panel, then the &quot;Pages&quot; tab to view all of the search term matches as well.</p>
+<p>You can click on a thumbnail or image number to go directly to that page of the text in the viewer. You can also select the thumbnail or title for the publication to open the whole publication in the viewer and select the left hand &quot;Search&quot; panel, then the &quot;Pages&quot; tab to view all of the search term matches as well.</p>
                
             <h2>EEBO Periodicals display</h2>
 			<p>Publications that are part of a series are displayed differently, to enable you to quickly identify them and navigate the individual issue you require.
@@ -541,25 +541,25 @@
           <a href="../images/support/screenshots/thumb-tabOA-1920px.jpg" target="_self"><img src="../images/support/screenshots/thumb-tabOA-700px.jpg" alt="Screenshot of the Thumbnails tab within the Search Panel in the Viewer" title="Screenshot of the Thumbnails tab within the Search Panel in the Viewer"></a>
           <h2 id="pubstab">Publications tab</h2>
 <p>The publications tab displays all of the other publications in Historical Texts that match your search terms, so you can quickly jump to a different publication from within the viewer instead of returning to the results page to select another text.</p>
-        <a href="../../images/support/screenshots/publications-tab-1920px.jpg" target="_self"><img src="../images/support/screenshots/publications-tab-700px.jpg" alt="Screenshot of the Publications tab within the Search Panel in the Viewer"/></a>
+        <a href="../images/support/screenshots/publications-tabOA-1920px.jpg" target="_self"><img src="../images/support/screenshots/publications-tabOA-700px.jpg" alt="Screenshot of the Publications tab within the Search Panel in the Viewer" title="Screenshot of the Publications tab within the Search Panel in the Viewer"></a>
 
 		<h2 id="detailspanel">Details panel</h2>
 
            <p>To open the details panel click on the &quot;details&quot; button on the right hand side of the viewer. You can re&#45;size the panel by dragging the handle in the middle of the panel edge across to the left and you can close the panel using the cross at the top of the panel edge. There are four buttons providing additional information on the publication: details, contents, text and tags.</p>
          <h2 id="detailstab">Details</h2>       
          <p>The details button displays the bibliographic information for a publication.</p>
-         <a href="../../images/support/screenshots/details-tab-1920px.jpg" target="_self"><img src="../images/support/screenshots/details-tab-700px.jpg" alt="Screenshot of the Details tab within the Details Panel in the Viewer"/></a>
+         <a href="../images/support/screenshots/details-tabOA-1920px.jpg" target="_self"><img src="../images/support/screenshots/details-tabOA-700px.jpg" alt="Screenshot of the Details tab within the Details Panel in the Viewer" title="Screenshot of the Details tab within the Details Panel in the Viewer"></a>
 		 <h2>Contents</h2>
-         <p>The table of contents feature is currently in development, so this button is disabled, but it will be available soon.</p>
+         <p>The table of contents feature is active but improvements will be made to it in due course.</p>
          <h2 id="texttab">Text</h2>
-		 <p>The text button displays the full text supporting the images, where available.You can also navigate through the publication using the navigation toolbar to the top of this tab. Here you can move forwards or backwards by page, jump to the start or end of a text, toggle between a single page or two pages reading view. This might be preferable for users who primarily want to read from the full text rather than the images.</p>
-         <p>Please note that full text is not available for all publications in Historical Texts. Publications with full text present will display a &quot;T&quot; icon in a grey square under &quot;details&quot; button when the panel is minimised. There is full text available for every title in ECCO and the BL 19th Century collections and this has been machine generated using Optical Character Recognition &#40;OCR&#41; software. There is full text for around a third of the EEBO collection currently and this has been manually keyed by the Text Creation Partnership. For the rest of the EEBO collection there are images and bibliographic information only. When full text is not available the full text tab will display the message &quot;Full text not available&quot;.</p>
-         <a href="../../images/support/screenshots/text-tab-1920px.jpg" target="_self"><img src="../images/support/screenshots/text-tab-700px.jpg" alt="Screenshot of the Text tab within the Details Panel in the Viewer"/></a>
+		 <p>The text button displays the full text supporting the images, where available. You can also navigate through the publication using the navigation toolbar to the top of this tab. Here you can move forwards or backwards by page, jump to the start or end of a text, toggle between a single page or two pages reading view. This might be preferable for users who primarily want to read from the full text rather than the images.</p>
+         <p>Please note that full text is not available for all publications in Historical Texts. Publications with full text present will display a &quot;T&quot; icon in a grey square under &quot;details&quot; button when the panel is minimized. There is full text available for every title in ECCO and the BL 19th Century and UK Medical Heritage Library collections, and this has been machine generated using Optical Character Recognition &#40;OCR&#41; software. There is full text for around 40&#37; of the EEBO collection currently and this has been manually keyed by the Text Creation Partnership. For the rest of the EEBO collection there are images and bibliographic information only. When full text is not available the full text tab will display the message &quot;Full text not available&quot;.</p>
+         <a href="../images/support/screenshots/details-tabOA-1920px.jpg" target="_self"><img src="../images/support/screenshots/text-tabOA-700px.jpg" alt="Screenshot of the Text tab within the Details Panel in the Viewer" title="Screenshot of the Text tab within the Details Panel in the Viewer"></a>
 		<h2 id="tagstab">Tags</h2>
-        <p>The tags button enables you to create and view tags for indivdiual pages within the publication you are viewing. To create a tag open the page you want tag in the viewer and enter a name for the tag in the box at the top of the tags screen and click on the &quot;add tag&quot; button. The tag will be displayed below, along with any other tags you have created in the publication. Click on the page number for any tag to jump directly to that page.</p>
+        <p>The tags button enables you to create and view tags for individual pages within the publication you are viewing. To create a tag open the page you want tag in the viewer and enter a name for the tag in the box at the top of the tags screen and click on the &quot;add tag&quot; button. The tag will be displayed below, along with any other tags you have created in the publication. Click on the page number for any tag to jump directly to that page.</p>
         <p> To view all of your tags for all publications select the &quot;My Texts&quot; then &quot;My Tags&quot; option from the black navigation bar at the top of the screen.</p>
         <p>Please note&#58; The My Tags feature requires logging in with an institutional account via the UK Federation &#40;Shibboleth and OpenAthens&#41; and is not available if you have accessed Historical Texts via IP authentication.</p>
-        <a href="../../images/support/screenshots/tags-tab-1920px.jpg" target="_self"><img src="../images/support/screenshots/tags-tab-700px.jpg" alt="Screenshot of the Tags tab within the Details Panel in the Viewer"/></a>
+        <a href="../images/support/screenshots/tags-tabOA-1920px.jpg" target="_self"><img src="../images/support/screenshots/tags-tabOA-700px.jpg" alt="Screenshot of the Tags tab within the Details Panel in the Viewer" title="Screenshot of the Tags tab within the Details Panel in the Viewer"></a>
         
 		<h2 id="download">Downloading </h2>
           <p>When you have opened a publication in the viewer, choose the &quot;Download&quot; button and select from a range of download options. The following options are available for all publications&#58;</p>
@@ -569,7 +569,7 @@
                   <li>citation information in .RIS format to import into reference management software</li>
           </ul>
  
-				<p>Publications with manually keyed text transcriptions provided by the Text Creation Partnership &#40;TCP&#41; now have the following additional download formats&#58;</p>
+				<p>Publications with manually keyed text transcriptions provided by the Text Creation Partnership &#40;TCP&#41; have the following additional download formats&#58;</p>
 				<ul>
 				<li>XML &#40;This is the TCP markup&#41;</li>
 				<li>ePub</li>
@@ -581,20 +581,15 @@
 				
                 <p>Please note&#58; the Download button is only enabled on the Navigation bar when you have opened a publication in the viewer. On all other pages it is currently disabled and greyed out with a message stating &quot;feature not available&quot; as you can only download a publication when you have selected and opened it.</p>
 
-			   <a href="../../images/support/screenshots/downloads-1920px.jpg" target="_self"><img src="../../images/support/screenshots/downloads-700px.jpg" alt="Screenshot of the Download drop down menu expanded, showing the available options for the current publication in the Viewer"/></a>
+			   <a href="../images/support/screenshots/downloadsOA-1920px.jpg" target="_self"><img src="../images/support/screenshots/downloadsOA-700px.jpg" alt="Screenshot of the Download drop down menu expanded, showing the available options for the current publication in the Viewer" title="Screenshot of the Download drop down menu expanded, showing the available options for the current publication in the Viewer"></a>
 
 <h2 id="stable">Stable URLs </h2>
-          <p>The &quot;Share&quot; button on the Navigation bar at the top of the screen provides a stable &#40;permanent&#41; URL for the publication you are viewing for you to copy and paste into your documents or web pages. The button is deactivated and greyed out until you open a publication in the Viewer, at which point it is enabled and when you select it a dialogue box containing a stable URL for the publication will be displayed. </p>
+          <p>The &quot;Share&quot; button on the Navigation bar at the top of the screen provides a stable &#40;permanent&#41; URL for the publication you are viewing for you to copy and paste into your documents or web pages. The button is deactivated and greyed out until you open a publication in the Viewer, at which point it is enabled. When you select the button a stable URL for the publication will copy to the clipboard.</p>
 
        		   <p>&nbsp;</p>
 
-			   <a href="../../images/support/screenshots/share-1920px.jpg" target="_self"><img src="../../images/support/screenshots/share-700px.jpg" alt="Screenshot of the Share button in the Viewer"/></a>
-                                 <br />
-                  
-       		   <p>When you select the button the dialogue box below will open, displaying a stable URL for the publication for you to copy and paste into a web page or document&#58;              </p>
-                  <br />
-                  
-			   <a href="../../images/support/screenshots/share-url-1920px.jpg" target="_self"><img src="../../images/support/screenshots/share-url-700px.jpg" alt="Screenshot of a Stable URL for a publication, displayed after the Share button was clicked"/></a>
+			   <a href="../images/support/screenshots/shareOA-1920px.jpg" target="_self"><img src="../images/support/screenshots/shareOA-700px.jpg" alt="Screenshot of the Share button in the Viewer" title="Screenshot of the Share button in the Viewer"></a>
+              <br />
 
 
     <h2 id="save">Saving searches and publications</h2>
@@ -607,18 +602,18 @@
 
 <p>To access previously saved searches and lists, click the &quot;My Texts&quot; drop&#45;down button, and select either &quot;Saved Searches&quot; or &quot;My Saved Items&quot;.</p>
 <p>You can create up to 99 searches and lists as well as save up to 99 publications in each list.</p>
-<p>&quot;Saved Searches&quot; will show any previously saved searches in a list, as well as the date of creation and how many results it returned. You can click on the &quot;Edit&quot; or &quot;Delete&quot; buttons to the right to update or remove them as required. Clicking on the name of a search will cause it to be re&#45;run. <strong>Please be aware that the data and indexes in Historical Texts are potentially subject to updates, which may cause previous searches to return differring results when run anew.</strong>
+<p>&quot;Saved Searches&quot; will show any previously saved searches in a list, as well as the date of creation and how many results it returned. You can click on the &quot;Edit&quot; or &quot;Delete&quot; buttons to the right to update or remove them as required. Clicking on the name of a search will cause it to be re&#45;run. <strong>Please be aware that the data and indexes in Historical Texts are potentially subject to updates, which may cause previous searches to return differing results when run anew.</strong></p>
 <p>&quot;My Saved Items&quot; will display any collections you have previously made. You can make new ones by clicking the green &quot;Create New Collection&quot; button, and name it by clicking the blue &quot;Edit&quot; button and typing in the name field. Once editing, additional buttons for &quot;Save&quot; and &quot;Cancel&quot; will appear. Unsaved changes will not be applied. You can delete collections if you need by clicking the red &quot;Delete&quot; button to the right of the page.</p>
 <p>Personalisation options are only available when logging in via an institutional account &#40;UK Federation Shibboleth&#47;OpenAthens&#41;. If you access Historical Texts directly &#40;i.e. using IP authentication&#41; then you will be prompted to login with an institutional account when you click on &quot;save search&quot;, &quot;My Saved Items&quot; or an option under &quot;My Texts&quot;. </p>
 
-			   <a href="../../images/support/screenshots/personalisation1-1920px.jpg" target="_self"><img src="../../images/support/screenshots/personalisation1-700px.jpg" alt="Screenshot showing the My Saved Items tab above a list of search results"/></a>
+			   <a href="../images/support/screenshots/personalisation1OA-1920px.jpg" target="_self"><img src="../images/support/screenshots/personalisation1OA-700px.jpg" alt="Screenshot showing the My Saved Items tab above a list of search results" title="Screenshot showing the My Saved Items tab above a list of search results"></a>
                   
                   <br />
                   <br />
 
-			   <a href="../../images/support/screenshots/personalisation2-1920px.jpg" target="_self"><img src="../../images/support/screenshots/personalisation2-700px.jpg" alt="Screenshot showing the options available in the expanded My Texts drop down menu"/></a>
+			   <a href="../images/support/screenshots/personalisation2OA-1920px.jpg" target="_self"><img src="../images/support/screenshots/personalisation2OA-700px.jpg" alt="Screenshot showing the options available in the expanded My Texts drop down menu" title="Screenshot showing the options available in the expanded My Texts drop down menu"></a>
                   <br />
-                                    <br />
+                  <br />
 <p>You can find out more about saved searches and publications by viewing our screencast on Personalisation options in Historical Texts below&#58;</p>
                       <br />              
 <iframe width="700" height="394" src="//www.youtube.com/embed/b37RxPEvtXU?rel=0&vq=hd720" frameborder="0" allowfullscreen></iframe>
@@ -626,19 +621,19 @@
  <h2 id="settings">Setting default search and display preferences</h2>
 	<p>You can set default search preferences for future sessions if you access the service using an institutional account &#40;Shibboleth&#47;OpenAthens&#41; rather than IP authentication. To do this select the Settings Cog icon on the Navigation bar.</p>
     
-    <a href="../../images/support/screenshots/settings-cog-1920px.jpg" target="_self"><img src="../images/support/screenshots/settings-cog-700px.jpg" alt="Screenshot highlighting the Cog icon on the navigation, used to access personalisation options"/></a>
+    <a href="../images/support/screenshots/settings-cogOA-1920px.jpg" target="_self"><img src="../images/support/screenshots/settings-cogOA-700px.jpg" alt="Screenshot highlighting the Cog icon on the navigation, used to access personalisation options" title="Screenshot highlighting the Cog icon on the navigation, used to access personalisation options"></a>
     
                   <br />                  
                   <br />
                   
 <p>The options are&#58;</p>
 	<ul>
-  <li>Advanced search panel&#58; Open&#47;Closed</li>
-  <li>Thumbnails on the results page&#58; On&#47;Off</li>
-  <li>Select collection to search&#58; choose one or more checkboxes for EEBO, ECCO or the BL 19th century</li>
+  	<li>Thumbnails on the results page&#58; On&#47;Off</li>
+	<li>Advanced search panel&#58; Open&#47;Closed</li>
+  	<li>Select collection to search&#58; choose one or more checkboxes for EEBO, ECCO, BL 19th century or the UK Medical Heritage Library</li>
     </ul>
     <p>Simply choose the options you want and click on the close button. If you experience any problems using these options then try the &quot;Reset&quot; button to reset your preferences back to the default settings and try again.</p>
-    <a href="../../images/support/screenshots/settings-1920px.jpg" target="_self"><img src="../images/support/screenshots/settings-700px.jpg" alt="Screenshot showing the available personalisation options after the Cog icon has been clicked"/></a>
+    <a href="../images/support/screenshots/settingsOA-1920px.jpg" target="_self"><img src="../images/support/screenshots/settingsOA-700px.jpg" alt="Screenshot showing the available personalisation options after the Cog icon has been clicked" title="Screenshot showing the available personalisation options after the Cog icon has been clicked"></a>
     <!--start hide
      <h1 id="cite">Citing Historical Texts</h1>
 	<p>When citing publications in Historical Texts we suggest you include the publication details for the print source as well as the details for the online version. You can download citation information in RIS format for import into third-party bibliographic referencing tools.</p>
@@ -678,6 +673,6 @@
 <p>These data changes may affect the number of results returned for your searches as well as whether full text is available for specific EEBO records. The dates of any data updates, along with the release of other new features, are listed on our <a href="../about/roadmap.html" title="Development roadmap">development roadmap</a>.</p>
 
 end hide -->
-    </div>
+</div>
 </div>
 </div>
