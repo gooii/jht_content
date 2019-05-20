@@ -12,6 +12,7 @@ var routes = {
   "sitemap"               : "about/sitemap.html",
   "termsofuse"            : "about/termsofuse.html",
   "accessibility"         : "about/accessibility.html",
+  "cookies"               : "about/cookies.html",
   "privacy"               : "about/privacy.html",
   // "features"              : "support/features.html",
   "quickref"              : "support/quickref.html",
