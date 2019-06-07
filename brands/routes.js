@@ -28,6 +28,7 @@ var routes = {
   "astronomy"             : "features/astronomy.html",
   "cookery"               : "features/cookery.html",
   "presentations"         : "about/presentations.html",
+  "reports"         	  : "about/reports.html",
   "events"                : "about/events.html",
   "labs"                  : "about/labs.html",    
   "stem"                  : "features/stem.html",
