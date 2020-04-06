@@ -35,6 +35,7 @@ var routes = {
   "comedy"                : "features/comedy.html",
   "browser"               : "about/browser.html",
   "opencookery"           : "features/opencookery.html",
-  "opentravel"            : "features/opentravel.html", 
+  "opentravel"            : "features/opentravel.html",
+  "newuser"            	  : "features/newuser.html",
   "openfitness"           : "features/openfitness.html"
 };
