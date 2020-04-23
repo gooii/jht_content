@@ -36,5 +36,6 @@ var routes = {
   "browser"               : "about/browser.html",
   "opencookery"           : "features/opencookery.html",
   "opentravel"            : "features/opentravel.html",
-  "openfitness"           : "features/openfitness.html"
+  "openfitness"           : "features/openfitness.html",
+  "newuser"				  : "support/newuser.html"
 };
