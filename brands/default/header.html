@@ -54,15 +54,15 @@
       </li>
       <!-- Link with sub options -->
       <li dropdown keyboard-nav>
-        <a dropdown-toggle>
+        <a href="#" role="button" id="browseDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" dropdown-toggle>
           Browse <span class="caret"></span>
         </a>
-        <ul class="dropdown-menu" role="menu">
-          <li data-ng-repeat="link in header.browseLinks track by $index"
+        <ul class="dropdown-menu"  role="menu" aria-labelledby="browseDropdown">
+          <li role="none" data-ng-repeat="link in header.browseLinks track by $index"
                        class="{{link.class}}"
                        title="{{link.title}}"
                data-ng-class="{disabled: link.disabled}">
-            <a data-ng-disabled="link.disabled"
+            <a role="menuitem" data-ng-disabled="link.disabled"
                    data-ng-href="{{link.url}}">
               {{link.display}}
             </a>
@@ -74,16 +74,17 @@
         <a data-ng-href="{{header.supportLink}}">Support</a>
       </li>
       <li dropdown keyboard-nav>
-	      <a dropdown-toggle>
+	      <a href="#" role="button" id="myTextsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" dropdown-toggle>
 		      My Texts <span class="caret"></span>
 	      </a>
-	      <ul class="dropdown-menu" role="menu">
-		      <li data-ng-repeat="item in header.myTextsOptions track by $index">
+	      <ul class="dropdown-menu" role="menu" aria-labelledby="myTextsDropdown">
+		      <li role="none" data-ng-repeat="item in header.myTextsOptions track by $index">
             <!-- Only executes the item's action fn if disabled is false and
                  there is an action property otherwise falls back on ng-href -->
-			      <a data-ng-click="(item.disabled && item.action) || item.action($event)"
+			      <a role="menuitem" data-ng-click="(item.disabled && item.action) || item.action($event)"
                 data-ng-href="{{item.link}}"
-               data-ng-class="{disabled: item.disabled}">
+               data-ng-class="{disabled: item.disabled}"
+               tabindex="0">
               {{item.display}}
             </a>
 		      </li>
