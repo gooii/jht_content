@@ -53,8 +53,8 @@
         <a data-ng-href="{{header.aboutLink}}">About</a>
       </li>
       <!-- Link with sub options -->
-      <li class="dropdown">
-        <a class="dropdown-toggle">
+      <li dropdown keyboard-nav>
+        <a dropdown-toggle>
           Browse <span class="caret"></span>
         </a>
         <ul class="dropdown-menu" role="menu">
@@ -73,11 +73,11 @@
       <li>
         <a data-ng-href="{{header.supportLink}}">Support</a>
       </li>
-      <li class="dropdown">
-	      <a class="dropdown-toggle">
+      <li dropdown keyboard-nav>
+	      <a dropdown-toggle>
 		      My Texts <span class="caret"></span>
 	      </a>
-	      <ul class="dropdown-menu" role="menu">
+	      <ul dropdown-toggle role="menu">
 		      <li data-ng-repeat="item in header.myTextsOptions track by $index">
             <!-- Only executes the item's action fn if disabled is false and
                  there is an action property otherwise falls back on ng-href -->
@@ -91,11 +91,11 @@
       </li>
       <!-- Render toobar items (icons with drop down menu options) -->
       <li data-ng-repeat="item in header.toolbarExtra track by $index"
-                   class="dropdown"
+           dropdown keyboard-nav
            data-ng-class="{disabled: item.disabled}">
         <!-- thanks angular -->
         <a data-tooltip-trigger data-ng-if="item.children.length > 0"
-                                     class="dropdown-toggle"
+                    dropdown-toggle
                     data-tooltip-placement="{{item.tooltipPlacement}}"
                               data-tooltip="{{item.tooltip}}">
           <i class="fa fa-lg" data-ng-class="item.icon"></i> <span class="caret"></span>
