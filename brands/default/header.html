@@ -81,7 +81,7 @@
 		      <li role="none" data-ng-repeat="item in header.myTextsOptions track by $index">
             <!-- Only executes the item's action fn if disabled is false and
                  there is an action property otherwise falls back on ng-href -->
-			      <a role="menuitem" data-ng-click="(item.disabled && item.action) || item.action($event)"
+			      <a role="menuitem" data-ng-click="(item.disabled && item.action) || item.action($event)" data-ng-keypress="(item.disabled && item.action) || item.action($event)"
                 data-ng-href="{{item.link}}"
                data-ng-class="{disabled: item.disabled}"
                tabindex="0">
