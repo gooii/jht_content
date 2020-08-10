@@ -57,7 +57,7 @@
         <a href="#" role="button" id="browseDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" dropdown-toggle>
           Browse <span class="caret"></span>
         </a>
-        <ul class="dropdown-menu"  role="menu" aria-labelledby="browseDropdown">
+        <ul class="dropdown-menu"  aria-labelledby="browseDropdown">
           <li role="none" data-ng-repeat="link in header.browseLinks track by $index"
                        class="{{link.class}}"
                        title="{{link.title}}"
@@ -69,6 +69,9 @@
           </li>
         </ul>
       </li>
+
+   
+
       <!-- Link -->
       <li>
         <a data-ng-href="{{header.supportLink}}">Support</a>
@@ -77,7 +80,7 @@
 	      <a href="#" role="button" id="myTextsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" dropdown-toggle>
 		      My Texts <span class="caret"></span>
 	      </a>
-	      <ul class="dropdown-menu" role="menu" aria-labelledby="myTextsDropdown">
+	      <ul class="dropdown-menu"  aria-labelledby="myTextsDropdown">
 		      <li role="none" data-ng-repeat="item in header.myTextsOptions track by $index">
             <!-- Only executes the item's action fn if disabled is false and
                  there is an action property otherwise falls back on ng-href -->
@@ -114,7 +117,7 @@
                               aria-label="Download a book">
           <i class="fa fa-lg" data-ng-class="item.icon"></i> <span class="caret"></span>
         </a>
-        <ul class="dropdown-menu" role="menu" data-ng-show="item.children.length > 0" aria-labelledby="item.id">
+        <ul class="dropdown-menu"  data-ng-show="item.children.length > 0" aria-labelledby="item.id">
           <li role="none" data-ng-repeat="item in item.children track by $index" title="{{item.title}}">
             <a href="#" data-ng-click="item.action($event)">
               {{item.title}}
