@@ -102,14 +102,16 @@
                     data-toggle="dropdown"
                     data-tooltip-placement="{{item.tooltipPlacement}}"
                     data-tooltip="{{item.tooltip}}"
-                    aria-haspopup="true" aria-expanded="false" aria-label="Book a download">
+                    aria-haspopup="true" aria-expanded="false" 
+                    aria-label="Download a book">
           <i class="fa fa-lg" data-ng-class="item.icon"></i> <span class="caret"></span>
         </a>
         <!-- thanks again angular -->
         <a href="#" data-tooltip-trigger data-ng-if="item.children.length == 0"
                                      class=""
                     data-tooltip-placement="{{item.tooltipPlacement}}"
-                              data-tooltip="{{item.tooltip}}">
+                              data-tooltip="{{item.tooltip}}"
+                              aria-label="Download a book">
           <i class="fa fa-lg" data-ng-class="item.icon"></i> <span class="caret"></span>
         </a>
         <ul class="dropdown-menu" role="menu" data-ng-show="item.children.length > 0" aria-labelledby="item.id">
@@ -127,7 +129,8 @@
                data-tooltip-placement="{{toolbarItem.tooltipPlacement}}"
                         data-ng-class="toolbarItem.id | lowercase"
                          data-tooltip="{{toolbarItem.tooltip}}"
-                        data-ng-click="toolbarItem.disabled || toolbarItem.action($event)">
+                        data-ng-click="toolbarItem.disabled || toolbarItem.action($event)"
+                        aria-label="{{toolbarItem.tooltip}}">
           <i class="fa fa-lg" data-ng-class="toolbarItem.icon"></i>
         </a>
       </li>
@@ -135,7 +138,8 @@
       <li>
         <a href="#" data-tooltip-trigger data-ng-href="{{header.helpLink.url}}"
                       data-tooltip-placement="{{header.helpLink.tooltipPlacement}}"
-                                data-tooltip="{{header.helpLink.tooltip}}">
+                                data-tooltip="{{header.helpLink.tooltip}}" 
+                                aria-label="{{header.helpLink.tooltip}}">
           <i class="fa fa-lg" data-ng-class="header.helpLink.icon"></i>
         </a>
       </li>
