@@ -100,21 +100,13 @@
            id="item.id">
         <!-- thanks angular -->
         <a href="#" role="button"
-<<<<<<< HEAD
-                    data-tooltip-trigger data-ng-if="item.children.length > 0"
-=======
         data-tooltip-trigger data-ng-if="item.children.length > 0"
->>>>>>> 89e4ecd98b2fa4646f7a4fd31d9e157d1c2617d0
                     dropdown-toggle
                     data-toggle="dropdown"
                     data-tooltip-placement="{{item.tooltipPlacement}}"
                     data-tooltip="{{item.tooltip}}"
-<<<<<<< HEAD
-                    aria-haspopup="true" aria-expanded="false" aria-label="Book a download">
-=======
                     aria-haspopup="true" aria-expanded="false" 
                     aria-label="Download a book">
->>>>>>> 89e4ecd98b2fa4646f7a4fd31d9e157d1c2617d0
           <i class="fa fa-lg" data-ng-class="item.icon"></i> <span class="caret"></span>
         </a>
         <!-- thanks again angular -->
@@ -122,17 +114,10 @@
                                      class=""
                     data-tooltip-placement="{{item.tooltipPlacement}}"
                               data-tooltip="{{item.tooltip}}"
-<<<<<<< HEAD
-                              aria-label="{{item.tooltip}}">
-          <i class="fa fa-lg" data-ng-class="item.icon"></i> <span class="caret"></span>
-        </a>
-        <ul class="dropdown-menu" role="menu" data-ng-show="item.children.length > 0" aria-labelledby="item.id">
-=======
                               aria-label="Download a book">
           <i class="fa fa-lg" data-ng-class="item.icon"></i> <span class="caret"></span>
         </a>
         <ul class="dropdown-menu"  data-ng-show="item.children.length > 0" aria-labelledby="item.id">
->>>>>>> 89e4ecd98b2fa4646f7a4fd31d9e157d1c2617d0
           <li role="none" data-ng-repeat="item in item.children track by $index" title="{{item.title}}">
             <a href="#" data-ng-click="item.action($event)">
               {{item.title}}
@@ -143,21 +128,12 @@
       <!-- Render toolbar items (icons) -->
       <li data-ng-repeat="toolbarItem in header.toolbarItems track by $index"
            data-ng-class="{disabled: toolbarItem.disabled}">
-<<<<<<< HEAD
-        <a href="#" data-tooltip-trigger class="toolbar-item"
-               data-tooltip-placement="{{toolbarItem.tooltipPlacement}}"
-                        data-ng-class="toolbarItem.id | lowercase"
-                        data-tooltip="{{toolbarItem.tooltip}}"
-                        aria-label="{{toolbarItem.tooltip}}"
-                        data-ng-click="toolbarItem.disabled || toolbarItem.action($event)">
-=======
            <a href="#" data-tooltip-trigger class="toolbar-item"
                data-tooltip-placement="{{toolbarItem.tooltipPlacement}}"
                         data-ng-class="toolbarItem.id | lowercase"
                          data-tooltip="{{toolbarItem.tooltip}}"
                         data-ng-click="toolbarItem.disabled || toolbarItem.action($event)"
                         aria-label="{{toolbarItem.tooltip}}">
->>>>>>> 89e4ecd98b2fa4646f7a4fd31d9e157d1c2617d0
           <i class="fa fa-lg" data-ng-class="toolbarItem.icon"></i>
         </a>
       </li>
@@ -165,13 +141,8 @@
       <li>
         <a href="#" data-tooltip-trigger data-ng-href="{{header.helpLink.url}}"
                       data-tooltip-placement="{{header.helpLink.tooltipPlacement}}"
-<<<<<<< HEAD
                       data-tooltip="Help"
                       aria-label="Help">
-=======
-                                data-tooltip="{{header.helpLink.tooltip}}" 
-                                aria-label="{{header.helpLink.tooltip}}">
->>>>>>> 89e4ecd98b2fa4646f7a4fd31d9e157d1c2617d0
           <i class="fa fa-lg" data-ng-class="header.helpLink.icon"></i>
         </a>
       </li>
