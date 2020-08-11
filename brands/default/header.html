@@ -80,16 +80,6 @@
 	      <a href="#" role="button" id="myTextsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" dropdown-toggle>
 		      My Texts <span class="caret"></span>
 	      </a>
-<<<<<<< HEAD
-	      <ul class="dropdown-menu" role="menu" aria-labelledby="myTextsDropdown">
-		      <li role="none" data-ng-repeat="item in header.myTextsOptions track by $index">
-            <!-- Only executes the item's action fn if disabled is false and
-                 there is an action property otherwise falls back on ng-href -->
-			      <a role="menuitem" data-ng-click="(item.disabled && item.action) || item.action($event)" data-ng-keypress="(item.disabled && item.action) || item.action($event)"
-                data-ng-href="{{item.link}}"
-               data-ng-class="{disabled: item.disabled}"
-               tabindex="0">
-=======
 	      <ul class="dropdown-menu"  aria-labelledby="myTextsDropdown">
 		      <li role="none" data-ng-repeat="item in header.myTextsOptions track by $index">
             <!-- Only executes the item's action fn if disabled is false and
@@ -98,7 +88,6 @@
                 data-ng-href="{{item.link}}"
                 data-ng-class="{disabled: item.disabled}"
                 tabindex="0">
->>>>>>> 89e4ecd98b2fa4646f7a4fd31d9e157d1c2617d0
               {{item.display}}
             </a>
 		      </li>
