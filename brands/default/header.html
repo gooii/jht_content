@@ -62,7 +62,7 @@
                        class="{{link.class}}"
                        title="{{link.title}}"
                data-ng-class="{disabled: link.disabled}">
-               <a role="menuitem" data-ng-disabled="link.disabled"
+            <a role="menuitem" data-ng-disabled="link.disabled"
                    data-ng-href="{{link.url}}">
               {{link.display}}
             </a>
@@ -141,8 +141,8 @@
       <li>
         <a href="#" data-tooltip-trigger data-ng-href="{{header.helpLink.url}}"
                       data-tooltip-placement="{{header.helpLink.tooltipPlacement}}"
-                                data-tooltip="{{header.helpLink.tooltip}}" 
-                                aria-label="{{header.helpLink.tooltip}}">
+                      data-tooltip="Help"
+                      aria-label="Help">
           <i class="fa fa-lg" data-ng-class="header.helpLink.icon"></i>
         </a>
       </li>
