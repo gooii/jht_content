@@ -37,7 +37,7 @@
                           class="back-to-search ng-scope"
                    data-tooltip="Back to search results">
         <span class="icon">
-          <i class="fa fa-angle-double-left fa-2x"></i>
+          <span class="fa fa-angle-double-left fa-2x"></span>
         </span>
         <span class="text">Results</span>
       </a>
@@ -108,7 +108,7 @@
                     data-tooltip="{{item.tooltip}}"
                     aria-haspopup="true" aria-expanded="false" 
                     aria-label="Download a book">
-          <i class="fa fa-lg" data-ng-class="item.icon"></i> <span class="caret"></span>
+          <span class="fa fa-lg" data-ng-class="item.icon"></span> <span class="caret"></span>
         </a>
         <!-- thanks again angular -->
         <a href="#" data-tooltip-trigger data-ng-if="item.children.length == 0"
@@ -116,7 +116,7 @@
                     data-tooltip-placement="{{item.tooltipPlacement}}"
                               data-tooltip="{{item.tooltip}}"
                               aria-label="Download a book">
-          <i class="fa fa-lg" data-ng-class="item.icon"></i> <span class="caret"></span>
+          <span class="fa fa-lg" data-ng-class="item.icon"></span> <span class="caret"></span>
         </a>
         <ul class="dropdown-menu"  data-ng-show="item.children.length > 0" aria-labelledby="item.id">
           <li role="none" data-ng-repeat="item in item.children track by $index" title="{{item.title}}">
@@ -135,7 +135,7 @@
                          data-tooltip="{{toolbarItem.tooltip}}"
                         data-ng-click="toolbarItem.disabled || toolbarItem.action($event)"
                         aria-label="{{toolbarItem.tooltip}}">
-          <i class="fa fa-lg" data-ng-class="toolbarItem.icon"></i>
+          <span class="fa fa-lg" data-ng-class="toolbarItem.icon"></span>
         </a>
       </li>
       <!-- Help page workaround so it can be opened in a new tab -->
@@ -144,7 +144,7 @@
                       data-tooltip-placement="{{header.helpLink.tooltipPlacement}}"
                       data-tooltip="Help"
                       aria-label="Help">
-          <i class="fa fa-lg" data-ng-class="header.helpLink.icon"></i>
+          <span class="fa fa-lg" data-ng-class="header.helpLink.icon"></span>
         </a>
       </li>
     </ul>
