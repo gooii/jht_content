@@ -59,7 +59,7 @@
                 <a data-ng-href="{{header.createStaticLink('support')}}">Support</a>
             </li>
             <li data-ng-repeat="item in header.toolbarExtras" class="dropdown">
-                <a href="#" class="dropdown-toggle" role="button id="visualisationsDropdown" aria-label="Visualisations">
+                <a href="#" class="dropdown-toggle" role="button" id="visualisationsDropdown" aria-label="Visualisations">
                     <i class="fa fa-lg" data-ng-class="item.icon"></i> <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="visualisationsDropdown">
@@ -73,7 +73,8 @@
                 <a href="#" data-tooltip-placement="{{toolbarItem.tooltipPlacement}}"
                              data-tooltip="{{header.getTooltip(toolbarItem.id) || ''}}"
                             data-ng-click="toolbarItem.disabled || header.toolbarItemClicked(toolbarItem.id)"
-                            tabindex="{{toolbarItem.disabled && '-1' || '0'}}">
+                            tabindex="{{toolbarItem.disabled && '-1' || '0'}}""
+                            aria-label="{{header.getTooltip(toolbarItem.id) || ''}}">
                   <i class="fa fa-lg" data-ng-class="toolbarItem.icon"></i>
                 </a>
             </li>
