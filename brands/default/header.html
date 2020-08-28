@@ -22,7 +22,7 @@
             <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" data-ng-href="{{header.homeLink}}">
-            <img data-ng-src="/images/header/logo.png"/>
+            <img data-ng-src="/images/header/logo.png"/ alt="Historical Texts logo">
         </a>
     </div>
     <!-- Back to results link: Only visible if we came from a search -->
@@ -48,7 +48,7 @@
                 <a class="dropdown-toggle">
                     Browse <span class="caret"></span>
                 </a>
-                <ul class="dropdown-menu" role="menu">
+                <ul class="dropdown-menu">
                     <li data-ng-repeat="link in header.browseLinks" class="{{link.class}}" title="{{link.title}}" data-ng-class="{disabled: link.disabled}">
                         <a data-ng-if="link.url.length > 0" data-ng-href="{{link.url}}" data-ng-disabled="link.disabled">{{link.display}}</a>
                     </li>
@@ -62,7 +62,7 @@
                 <a class="dropdown-toggle">
                     <i class="fa fa-lg" data-ng-class="item.icon"></i> <span class="caret"></span>
                 </a>
-                <ul class="dropdown-menu" role="menu">
+                <ul class="dropdown-menu">
                     <li data-ng-repeat="item in item.children" title="{{item.title}}">
                         <a data-ng-click="item.action()">{{item.title}}</a>
                     </li>
