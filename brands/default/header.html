@@ -45,11 +45,11 @@
             </li>
             <!-- Link with sub options -->
             <li class="dropdown">
-                <a class="dropdown-toggle">
+                <a href="#" class="dropdown-toggle" role="button" id="browseDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Browse <span class="caret"></span>
                 </a>
-                <ul class="dropdown-menu">
-                    <li data-ng-repeat="link in header.browseLinks" class="{{link.class}}" title="{{link.title}}" data-ng-class="{disabled: link.disabled}">
+                <ul class="dropdown-menu" aria-labelledby="browseDropdown">
+                    <li role="none" data-ng-repeat="link in header.browseLinks" class="{{link.class}}" title="{{link.title}}" data-ng-class="{disabled: link.disabled}">
                         <a data-ng-if="link.url.length > 0" data-ng-href="{{link.url}}" data-ng-disabled="link.disabled">{{link.display}}</a>
                     </li>
                 </ul>
@@ -59,20 +59,21 @@
                 <a data-ng-href="{{header.createStaticLink('support')}}">Support</a>
             </li>
             <li data-ng-repeat="item in header.toolbarExtras" class="dropdown">
-                <a class="dropdown-toggle">
+                <a href="#" class="dropdown-toggle" role="button id="visualisationsDropdown" aria-label="Visualisations">
                     <i class="fa fa-lg" data-ng-class="item.icon"></i> <span class="caret"></span>
                 </a>
-                <ul class="dropdown-menu">
-                    <li data-ng-repeat="item in item.children" title="{{item.title}}">
-                        <a data-ng-click="item.action()">{{item.title}}</a>
+                <ul class="dropdown-menu" aria-labelledby="visualisationsDropdown">
+                    <li role="none" data-ng-repeat="item in item.children" title="{{item.title}}">
+                        <a href="#" data-ng-click="item.action()">{{item.title}}</a>
                     </li>
                 </ul>
             </li>
             <!-- Render toolbar items -->
             <li data-ng-repeat="toolbarItem in header.toolbarItems" data-ng-class="{disabled: toolbarItem.disabled}">
-                <a data-tooltip-placement="{{toolbarItem.tooltipPlacement}}"
+                <a href="#" data-tooltip-placement="{{toolbarItem.tooltipPlacement}}"
                              data-tooltip="{{header.getTooltip(toolbarItem.id) || ''}}"
-                            data-ng-click="toolbarItem.disabled || header.toolbarItemClicked(toolbarItem.id)">
+                            data-ng-click="toolbarItem.disabled || header.toolbarItemClicked(toolbarItem.id)"
+                            tabindex="{{toolbarItem.disabled && '-1' || '0'}}">
                   <i class="fa fa-lg" data-ng-class="toolbarItem.icon"></i>
                 </a>
             </li>
