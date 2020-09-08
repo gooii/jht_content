@@ -1,6 +1,7 @@
 <div class="navbar navbar-inverse" role="navigation">
   <!-- jisc banner-->
   <header class="c-structure__jisc-masthead">
+    <a class="skip-main" id="skipper" href tabindex="0" data-ng-click="header.scrollToTarget('skipTarget')">Skip to main content</a>
       <div class="c-jisc-banner">
           <div class="o-layout__container">
               <div class="c-jisc-banner__inner">
@@ -25,7 +26,7 @@
     </button>
     <!-- Link to search app -->
     <a class="navbar-brand" data-ng-href="{{header.homeLink}}">
-      <img data-ng-src="/images/header/logo.png"/>
+      <img data-ng-src="/images/header/logo.png" alt="Historical Texts logo">
     </a>
   </div>
   <!-- Back to results link: Only visible if we came from a search -->
@@ -36,7 +37,7 @@
                           class="back-to-search ng-scope"
                    data-tooltip="Back to search results">
         <span class="icon">
-          <i class="fa fa-angle-double-left fa-2x"></i>
+          <span class="fa fa-angle-double-left fa-2x"></span>
         </span>
         <span class="text">Results</span>
       </a>
@@ -53,37 +54,41 @@
         <a data-ng-href="{{header.aboutLink}}">About</a>
       </li>
       <!-- Link with sub options -->
-      <li class="dropdown">
-        <a class="dropdown-toggle">
+      <li dropdown keyboard-nav>
+        <a href="#" role="button" id="browseDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" dropdown-toggle>
           Browse <span class="caret"></span>
         </a>
-        <ul class="dropdown-menu" role="menu">
-          <li data-ng-repeat="link in header.browseLinks track by $index"
+        <ul class="dropdown-menu"  aria-labelledby="browseDropdown">
+          <li role="none" data-ng-repeat="link in header.browseLinks track by $index"
                        class="{{link.class}}"
                        title="{{link.title}}"
                data-ng-class="{disabled: link.disabled}">
-            <a data-ng-disabled="link.disabled"
+            <a role="menuitem" data-ng-disabled="link.disabled"
                    data-ng-href="{{link.url}}">
               {{link.display}}
             </a>
           </li>
         </ul>
       </li>
+
+   
+
       <!-- Link -->
       <li>
         <a data-ng-href="{{header.supportLink}}">Support</a>
       </li>
-      <li class="dropdown">
-	      <a class="dropdown-toggle">
+      <li dropdown keyboard-nav>
+	      <a href="#" role="button" id="myTextsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" dropdown-toggle>
 		      My Texts <span class="caret"></span>
 	      </a>
-	      <ul class="dropdown-menu" role="menu">
-		      <li data-ng-repeat="item in header.myTextsOptions track by $index">
+	      <ul class="dropdown-menu"  aria-labelledby="myTextsDropdown">
+		      <li role="none" data-ng-repeat="item in header.myTextsOptions track by $index">
             <!-- Only executes the item's action fn if disabled is false and
                  there is an action property otherwise falls back on ng-href -->
-			      <a data-ng-click="(item.disabled && item.action) || item.action($event)"
+                 <a role="menuitem" data-ng-click="(item.disabled && item.action) || item.action($event)" data-ng-keypress="(item.disabled && item.action) || item.action($event)"
                 data-ng-href="{{item.link}}"
-               data-ng-class="{disabled: item.disabled}">
+                data-ng-class="{disabled: item.disabled}"
+                tabindex="0">
               {{item.display}}
             </a>
 		      </li>
@@ -91,25 +96,31 @@
       </li>
       <!-- Render toobar items (icons with drop down menu options) -->
       <li data-ng-repeat="item in header.toolbarExtra track by $index"
-                   class="dropdown"
-           data-ng-class="{disabled: item.disabled}">
+           dropdown keyboard-nav
+           data-ng-class="{disabled: item.disabled}"
+           id="item.id">
         <!-- thanks angular -->
-        <a data-tooltip-trigger data-ng-if="item.children.length > 0"
-                                     class="dropdown-toggle"
+        <a href="#" role="button"
+        data-tooltip-trigger data-ng-if="item.children.length > 0"
+                    dropdown-toggle
+                    data-toggle="dropdown"
                     data-tooltip-placement="{{item.tooltipPlacement}}"
-                              data-tooltip="{{item.tooltip}}">
-          <i class="fa fa-lg" data-ng-class="item.icon"></i> <span class="caret"></span>
+                    data-tooltip="{{item.tooltip}}"
+                    aria-haspopup="true" aria-expanded="false" 
+                    aria-label="Download a book">
+          <span class="fa fa-lg" data-ng-class="item.icon"></span> <span class="caret"></span>
         </a>
         <!-- thanks again angular -->
-        <a data-tooltip-trigger data-ng-if="item.children.length == 0"
+        <a href="#" data-tooltip-trigger data-ng-if="item.children.length == 0"
                                      class=""
                     data-tooltip-placement="{{item.tooltipPlacement}}"
-                              data-tooltip="{{item.tooltip}}">
-          <i class="fa fa-lg" data-ng-class="item.icon"></i> <span class="caret"></span>
+                              data-tooltip="{{item.tooltip}}"
+                              aria-label="Download a book">
+          <span class="fa fa-lg" data-ng-class="item.icon"></span> <span class="caret"></span>
         </a>
-        <ul class="dropdown-menu" role="menu" data-ng-show="item.children.length > 0">
-          <li data-ng-repeat="item in item.children track by $index" title="{{item.title}}">
-            <a data-ng-click="item.action($event)">
+        <ul class="dropdown-menu"  data-ng-show="item.children.length > 0" aria-labelledby="item.id">
+          <li role="none" data-ng-repeat="item in item.children track by $index" title="{{item.title}}">
+            <a href="#" data-ng-click="item.action($event)">
               {{item.title}}
             </a>
           </li>
@@ -118,20 +129,22 @@
       <!-- Render toolbar items (icons) -->
       <li data-ng-repeat="toolbarItem in header.toolbarItems track by $index"
            data-ng-class="{disabled: toolbarItem.disabled}">
-        <a data-tooltip-trigger class="toolbar-item"
+           <a href="#" data-tooltip-trigger class="toolbar-item"
                data-tooltip-placement="{{toolbarItem.tooltipPlacement}}"
                         data-ng-class="toolbarItem.id | lowercase"
                          data-tooltip="{{toolbarItem.tooltip}}"
-                        data-ng-click="toolbarItem.disabled || toolbarItem.action($event)">
-          <i class="fa fa-lg" data-ng-class="toolbarItem.icon"></i>
+                        data-ng-click="toolbarItem.disabled || toolbarItem.action($event)"
+                        aria-label="{{toolbarItem.tooltip}}">
+          <span class="fa fa-lg" data-ng-class="toolbarItem.icon"></span>
         </a>
       </li>
       <!-- Help page workaround so it can be opened in a new tab -->
       <li>
-        <a data-tooltip-trigger data-ng-href="{{header.helpLink.url}}"
+        <a href="#" data-tooltip-trigger data-ng-href="{{header.helpLink.url}}"
                       data-tooltip-placement="{{header.helpLink.tooltipPlacement}}"
-                                data-tooltip="{{header.helpLink.tooltip}}">
-          <i class="fa fa-lg" data-ng-class="header.helpLink.icon"></i>
+                      data-tooltip="Help"
+                      aria-label="Help">
+          <span class="fa fa-lg" data-ng-class="header.helpLink.icon"></span>
         </a>
       </li>
     </ul>
