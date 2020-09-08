@@ -11,7 +11,7 @@ var routes = {
   // "librarians"            : "support/librarians.html",
   "sitemap"               : "about/sitemap.html",
   "termsofuse"            : "about/termsofuse.html",
-  "accessibility"         : "about/accessibility.html",
+  "accessibility"         : "about/accessibilityPSBAR.html",
   "cookies"               : "about/cookies.html",
   "privacy"               : "about/privacy.html",
   // "features"              : "support/features.html",
