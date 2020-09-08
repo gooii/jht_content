@@ -65,7 +65,7 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="{{item.id}}-menu">
                     <li role="none" data-ng-repeat="item in item.children" title="{{item.title}}">
-                        <a href="#" data-ng-click="item.action()">{{item.title}}</a>
+                        <a href="#" data-ng-click="$event.preventDefault();item.action()">{{item.title}}</a>
                     </li>
                 </ul>
             </li>
@@ -73,8 +73,8 @@
             <li data-ng-repeat="toolbarItem in header.toolbarItems" data-ng-class="{disabled: toolbarItem.disabled}">
                 <a href="#" data-tooltip-placement="{{toolbarItem.tooltipPlacement}}"
                     data-tooltip="{{header.getTooltip(toolbarItem.id) || ''}}"
-                    data-ng-click="toolbarItem.disabled || header.toolbarItemClicked(toolbarItem.id)"
-                    tabindex="{{toolbarItem.disabled && '-1' || '0'}}""
+                    data-ng-click="$event.preventDefault();header.toolbarItemClicked(toolbarItem.id)"
+                    tabindex="{{toolbarItem.disabled && '-1' || '0'}}"
                     aria-label="{{header.getTooltip(toolbarItem.id) || ''}}">
                   <i class="fa fa-lg" data-ng-class="toolbarItem.icon"></i>
                 </a>
