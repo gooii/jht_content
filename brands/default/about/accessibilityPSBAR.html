@@ -44,6 +44,7 @@
 				<li>Navigate most of the website using just a keyboard</li>
 				<li>Listen to most of the website using a screen reader &#40;tested using NVDA&#41;</li>
 				<li>Skip to main content on all but one page</li>
+				<li>Access audiodescription for videos without sound</li>
 			</ul>
 			
 			<p>We’ve also made the website text as simple as possible to understand.</p>
@@ -57,10 +58,11 @@
 			<!--list of items that are not compliant-->
 			
 			<ul>
-				<li>Although we have made recent improvements to the site, the viewer still has some issues. If you are having difficulties, the best solution may be to open the item in the viewer and download the PDF&#47;text files from the download menu. This can be operated by keyboard and even when styling is turned off for the viewer page, the buttons still operate. This would also be our recommendation if you need to use the viewer at a magnification above 200&#37;.</li>
+				<li>Although we have made recent improvements to the site, the viewer still has some issues. If you are having difficulties, the best solution may be to open the item in the viewer and download the PDF&#47;text files from the download menu. This can be operated by keyboard and, even when styling is turned off for the viewer page, the buttons still operate. This would also be our recommendation if you need to use the viewer at a magnification above 200&#37;.</li>
 				<li>The site is not fully usable in the portrait orientation on a small screen device. We recommend viewing the site in landscape orientation if possible. If this is not possible, we recommend viewing search results in the portrait orientation and then downloading the PDF from the viewer rather than trying to operate the viewer in portrait orientation.</li>
 				<li>When you view some of our pages at or above 200&#37; zoom, although the text reflows, parts of some images and videos are lost off the right&#45;hand side of the page. Some of these images can be viewed as full page images &#40;e.g. in the Quick Reference Guide&#41; so check if they can be clicked on to enlarge them that way. An alternative source for our support videos is the <a href="https://www.youtube.com/user/jischistoricaltexts" target="_self">Historical Texts YouTube channel</a>.</li>
 				<li>Although we have worked to make our newest PDFs accessible &#40;checking them for compliance with Adobe Acrobat DC&#41; we recommend using the HTML version of our Quick Reference Guide for those using assistive technology and the more accessible .doc version of the Quick Start Leaflet on the librarians page.</li>
+				<l>It is not possible to use the histogram to narrow date ranges with a keyboard. It is possible to achieve the same result using the advanced search date filter, which can be operated by keyboard.</l>
 			</ul>
 			
 			<h2>Feedback and contact information</h2>
@@ -99,19 +101,23 @@
 			
 			<p>A number of our pages lack headings which makes it harder for those using screen readers to navigate. This fails WCAG 2.1. success criterion 1.3.1 &#40;Info and Relationships&#41;. There is also a drop&#45;down autofill for tags in the viewer which lacks a description which fails the same criterion. We plan to ensure that all pages in the new site we are designing have appropriately used headings and descriptions on all pages.</p>
 			
-			<p>If styling is removed from the viewer page, the content is no longer fully usable. This fails WCAG 2.1 success criterion 1.3.2 &#40;Meaningful sequence&#41;. The best solution to this is to download the PDF&#47;text and read it outside the viewer. This operation can also be carried out from the page with the styling turned off.</p>
+			<p>If styling is removed from the viewer page, the content is no longer fully usable. This fails WCAG 2.1 success criterion 1.3.2 &#40;Meaningful sequence&#41;. The best solution to this is to download the PDF&#47;text and read it outside the viewer. This operation can still be carried out from the page with the styling turned off.</p>
 			
 			<p>The site was originally designed with only desktop use in mind, and although improvements have been made to increase the usability on smaller screen tablet&#47;mobile devices, it is still not really possible to use the site properly in a portrait orientation. This fails WCAG 2.1 success criterion 1.3.4 &#40;Orientation&#41;. We plan to ensure that the new site we are designing is usable in both portrait and landscape orientation from the start.</p>
 			
-			<p>When the site is zoomed in to 200&#37; or more, although text reflows as required, some images and videos &quot;fall off&quot; the right&#45;hand side of the page rather than resizing. When using the viewer at a magnification of above 200&#37; it becomes very difficult to use the content of the side panels and some of this is lost. These fail WCAG criterion 1.4.10 &#40;Reflow&#41;. Some workarounds for this issue are listed earlier in the document. We plan to use a fully fluid layout for the new site we are designing which will eliminate these issues.</p>
+			<p>There are a small number of pages that still have text and graphical object contrast issues which fail WCAG 2.1 criteria 1.4.3. &#40;Contrast Minimum&#41; and 1.4.11. &#40;Non text contrast&#41;. We will ensure the issues are eliminated on the new platform we are developing.</p>
 			
-			<p>A &quot;Skip to main content,&quot; link is not currently available in the viewer which fails WCAG criterion 2.4.1. &#40;Bypass Blocks&#41;. These have been added to all other pages, but technical difficulties prevent it from being added to the third party viewer page. We plan to ensure that all ages in the new platform have bypass blocks in place.</p>
+			<p>When the site is zoomed in to 200&#37; or more, although text reflows as required, some images and videos &quot;fall off&quot; the right&#45;hand side of the page rather than resizing. When using the viewer at a magnification of above 200&#37; it becomes very difficult to use the content of the side panels and some of this is lost. These fail WCAG criterion 1.4.10 &#40;Reflow&#41;. Some workarounds for this issue are listed earlier in this document. We plan to use a fully fluid layout for the new site we are designing which will eliminate these issues.</p>
+			
+			<p>Please note that the zoom in and zoom out keys in the viewer cannot be operated by keyboard when using the viewer in Chrome which fails WCAG 2.1 criterion 2.1.1 &#40;Keyboard&#41;. A workaround for this is to use the viewer in FireFox which does not suffer from this issue, caused by a bug in our third party viewer. It is also not possible to operate the histogram using the keyboard but the same result can be achieved using the advanced search date filter, which can be operated by keyboard.</p>
+			
+			<p>A &quot;Skip to main content,&quot; link is not currently available in the viewer which fails WCAG 2.1 criterion 2.4.1. &#40;Bypass Blocks&#41;. These have been added to all other pages, but technical difficulties prevent it from being added to the third party viewer page. We plan to ensure that all pages in the new platform have bypass blocks in place.</p>
 			
 			<p>Most pages have a unique title but currently the search results page and browse pages have the identical title of &quot;results.&quot; This makes distinguishing these pages for those using a screen reader more difficult and fails WCAG 2.1 criterion 2.4.2 &#40;Page titled&#41;. We plan to ensure that all pages have unique titles in the new platform we are building.</p>
 			
-			<p>Currently it is possible to have multiple saved searches with the same name. This leads to a list of links with the same names but going to different places which can be confusing for those using a screen reader and fails automated tests for WCAG 2.1 criterion 2.4.4 &#40;Link Purpose In Context&#41;. We plan to change the way that the saved searches operate in our new platform to avoid this.</p>
+			<p>On some pages, there are links with the same text that go to different places. It is also possible to have multiple saved searches with the same name. This leads to a list of links with the same names but going to different places. This can be confusing for screen reader users and fails WCAG 2.1 criterion 2.4.4 &#40;Link Purpose In Context&#41;. We plan to differentiate these links where possible either by updating the text or using aria-labelledby by 23 September 2020. For those where this is not possible due to the structure of the site, we will change we way we create menus in the new site we are designing. We also plan to change the way that the saved searches operate in our new platform.</p>
 			
-			<p>We are aware that although improvements have been made to the navigability of the site by keyboard/screen reader, it is still sometimes difficult to see where you are which fails WCAG criterion 2.4.7 &#40;Focus visible&#41;. We plan to use a design pattern which will make focus states more consistently perceivable in the new site we are designing.</p>
+			<p>We are aware that although improvements have been made to the navigability of the site by keyboard/screen reader, it is still sometimes difficult to see where you are which fails WCAG 2.1 criterion 2.4.7 &#40;Focus visible&#41;. We plan to use a design pattern which will make focus states more consistently perceivable in the new site we are designing.</p>
 			
 			<p>Currently it is possible to enter incorrect text into the date field of the advanced search and no error message is generated. This fails WCAG 2.1 criterion 3.3.1 &#40;Error Identification&#41;. As we build our new platform, we plan to have a consistent approach to error reporting and this will be resolved.</p>
 			
@@ -137,24 +143,24 @@
 			
 			<h2>What we&#39;re doing to improve accessibility</h2>
 			
-			<p>Our accessibility roadmap [add link to roadmap] shows how and when we plan to improve accessibility on this website.</p>
+			<p>We plan to bring the design and maintainence of the Historical Texts site in house over the next two years, including a package of work on redesigning some aspects of the site and moving to the use of the <a href="https://universalviewer.io" target="_self">Universal Viewer</a>. As part of this work we will be bulding the site with accessibility as a foundational principle.</p>
 			
 			<h2>Preparation of this accessibility statement</h2>
 			
-			<p>This statement was prepared on 26 August 2020. It was last reviewed on 26 August 2020.</p>
+			<p>This statement was prepared on 21 September 2020. It was last reviewed on 21 September 2020.</p>
 			
-			<p>This website was last tested on 26 August 2020. The test was carried out members of the Historical Texts team.</p>
+			<p>This website was last tested on 15 September 2020. The test was carried out members of the Historical Texts team.</p>
 			
 			<p>We selected several pages that represented different types of content on the site ensuring there were images, links and forms across the selection. We tested&#58;</p>
 			
 			<ul>
-				<li>Journal Archives home page</li>
+				<li>Historical Texts Preview home page</li>
 				<li>Search results page</li>
 				<li>Viewer</li>
 				<li>Support home page</li>
 				<li>Quick Reference guide page</li>
 				<li>About home page</li>
-				<li>Archives</li>
+				<li>Collections</li>
 				<li>Browse page</li>
 				<li>Personalisation page</li>
 			</ul>
