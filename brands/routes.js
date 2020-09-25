@@ -37,7 +37,7 @@ var routes = {
   "opencookery"           : "features/opencookery.html;Open Access Cookery Feature",
   "opentravel"            : "features/opentravel.html;Open Access Travel Feature",
   "openfitness"           : "features/openfitness.html;Open Access Fitness Feature",
-  "blackhistory"          : "features/blackhistry.html;Black History Feature",
+  "blackhistory"          : "features/blackhistory.html;Black History Feature",
   "newuser"				  : "support/newuser.html;New User"
 	
 };
