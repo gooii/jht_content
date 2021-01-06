@@ -38,6 +38,7 @@ var routes = {
   "opentravel"            : "features/opentravel.html;Open Access Travel Feature",
   "openfitness"           : "features/openfitness.html;Open Access Fitness Feature",
   "blackhistory"          : "features/blackhistory.html;Black History Feature",
+  "animals"          	  : "features/animals.html;Animals Feature",
   "newuser"				  : "support/newuser.html;New User"
 	
 };
