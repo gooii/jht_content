@@ -24,7 +24,7 @@ var routes = {
   "locallondon"           : "features/locallondon.html;London Local History Feature",
   "surveys"               : "about/surveys.html;Surveys",
   "christmas"             : "features/christmas.html;Christmas Feature",
-  "travel"                : "features/travel.htmlTravel Feature",
+  "travel"                : "features/travel.html;Travel Feature",
   "astronomy"             : "features/astronomy.html;Astronomy Feature",
   "cookery"               : "features/cookery.html;Cookery Feature",
   "presentations"         : "about/presentations.html;Presentations",
@@ -38,6 +38,7 @@ var routes = {
   "opentravel"            : "features/opentravel.html;Open Access Travel Feature",
   "openfitness"           : "features/openfitness.html;Open Access Fitness Feature",
   "blackhistory"          : "features/blackhistory.html;Black History Feature",
+  "animals"          	  : "features/animals.html;Animals Feature",
   "newuser"				  : "support/newuser.html;New User"
 	
 };
