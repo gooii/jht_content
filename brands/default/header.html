@@ -53,26 +53,7 @@
       <li>
         <a data-ng-href="{{header.aboutLink}}">About</a>
       </li>
-      <!-- Link with sub options -->
-      <li dropdown keyboard-nav>
-        <a href="#" role="button" id="browseDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" dropdown-toggle>
-          Browse <span class="caret"></span>
-        </a>
-        <ul class="dropdown-menu"  aria-labelledby="browseDropdown">
-          <li role="none" data-ng-repeat="link in header.browseLinks track by $index"
-                       class="{{link.class}}"
-                       title="{{link.title}}"
-               data-ng-class="{disabled: link.disabled}">
-            <a role="menuitem" data-ng-disabled="link.disabled"
-                   data-ng-href="{{link.url}}">
-              {{link.display}}
-            </a>
-          </li>
-        </ul>
-      </li>
-
-   
-
+      
       <!-- Link -->
       <li>
         <a data-ng-href="{{header.supportLink}}">Support</a>
