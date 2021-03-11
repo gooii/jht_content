@@ -47,43 +47,38 @@
           <p>This is the Help page for the Burney Newspaper Collection. It is intended to assist researchers using the collection via this Historical Texts labs site.</p>
 		  
 		  <h2 id="navbar">Navigation bar</h2>
-            <p>There is a black horizontal navigation bar at the top&#45;right of the screen on every page of Historical Texts so you can quickly navigate to any part of the website from any page you are on. Some options are only be available on certain pages though, for example the Download and Share buttons are only enabled when you have opened a publication.</p>
-
-		  <img src="../images/support/screenshots/navigationbarOA-700px.jpg" width="700" height="46" alt=""/>
+            <p>There is a black horizontal navigation bar at the top&#45;right of the screen on every page of Historical Texts so you can quickly navigate to any part of the website from any page you are on. Some options are only be available on certain pages though, for example the Download button is only enabled when you have opened a publication in the viewer.</p>
+			<p>
+				<img src="../images/support/screenshots/navigationbar-preview.jpg" alt=""/>
+			</p>
 			
 			<h2 id="collections">Features of the Burney Collection</h2>
 			
-			<p>FULL TEXT - Full text is available for every title in the collection. The text is machine generated using Optical Character Recognition (OCR) software.</p>
+			<p>FULL TEXT &#45; Full text is available for every title in the collection. The text is machine generated using Optical Character Recognition &#40;OCR&#41; software.</p>
 
-			<p>PDF DOWNLOADS - PDFs are available for every title, and the PDF for a whole publication can be downloaded directly. These are searchable PDFs.</p>
+			<p>PDF DOWNLOADS &#45; PDFs are available for every title, and the PDF for a whole publication can be downloaded directly using a URL link.</p>
 
-			<p>PAGE IMAGE DOWNLOADS - Full-colour images for every individual page are available and can be downloaded individually in the JPEG format.</p>
+			<p>PAGE IMAGE DOWNLOADS &#45; Images for every page are available and can be downloaded individually in the JPEG format.</p>
 
-			<p>OTHER DOWNLOAD OPTIONS - The bibliographic citation information can be downloaded in the .RIS Reference Manager format.</p>
+			<p>OTHER DOWNLOAD OPTIONS &#45; Currently the bibliographic citation information cannot be downloaded.</p>
 
 			<h2 id="search">Searching</h2>
-            
 
             <p>We are using <a href="http://www.elasticsearch.org">Elasticsearch</a> open source software to index the data in Historical Texts.</p>
 			
-            <p>To run a search, enter your search terms in the Search box and select the &quot;Search&quot; button. By default, this will search all of the information in the bibliographic records as well as the full text. The search software is not case-sensitive so &quot;Shakespeare&quot; will return the same results as &quot;shakespeare&quot;. The number of matching results will be shown to the right of the Search box.</p>
+            <p>To run a search, enter your search terms in the Search box and select the &quot;Search&quot; button. By default, this will search all of the information in the bibliographic records as well as the full text. The search software is not case&#45;sensitive so &quot;Shakespeare&quot; will return the same results as &quot;shakespeare&quot;. The number of matching results will be shown to the right of the Search box.</p>
 			
 			<p><em>It is worth noting that you can see where in a publication your search terms match using the &quot;Pages&quot; tab in the &quot;Search&quot; panel, within the Viewer &#45; and that you can then search for new terms within the publication using the Search box at the top of the &quot;Pages&quot; tab. <a href="/help#viewer">For more information, see the section on the viewer</a></em>.</p> 
             
-			<p>If you do want to limit your search to a particular field e.g. Title or Author you can do so using the drop&#45;down list to the left of the Search box.</p> <!--is this correct for Burney?-->
+			<p>If you do want to limit your search to a particular field e.g. Title you can do so using the drop&#45;down list to the left of the Search box.</p>
 			
-            <p>The following options are available but please note that not all records contain these items of metadata&#58;</p>
+            <p>The following options are available&#58;</p>
             <ul>
               <li>All</li>
               <li>Title</li>
-              <li>Author</li>
-              <li>Printer/Publisher</li>
-              <li>Place of publication</li> <!--check these options for Burney-->
               <li>Bibliographic number</li>
-              <li>Language</li>
-              <li>Illustration description</li>
-              <li>Subject</li>
               <li>Genre</li>
+              <li>Text type</li>
             </ul>
 
 			<h2>Building up complex queries</h2>
@@ -220,26 +215,20 @@
 
 			<pre>&#95;missing&#95;&#58;publication.edition.statement</pre>
 
-			<p>Bibliographic fields supported in the drop&#45;down Search box menu&#58;</p> <!--check this for burney-->
+			<p>Bibliographic fields supported in the drop&#45;down Search box menu&#58;</p>
 
 			<ul>
 				<li>All&#58; &#95;all</li>
 				<li>Title&#58; title&#95;all&#95;text</li>
-				<li> Author&#58; author&#95;all&#95;text</li>
-				<li>Publisher&#47;Printer&#58; lifecycle.publication.publisher.name.value_text</li>
-				<li>Place of publication&#58; lifecycle.publication.place.name.value&#95;text</li>
 				<li>Bibliographic number&#58; bibliographic&#95;number</li>
-				<li> Language&#58; language</li>
-				<li> Subject&#58; subject&#95;all&#95;text</li>
 				<li>Genre/Material type&#58; type&#95;or&#95;genre&#95;all&#95;text</li>
-				<li>Illustration Description&#58; searches both &#39;physical&#95;descriptors.other&#39; and &#39;figures&#39;</li>
 			</ul>
 			
 			<p>Also dates&#58;</p>
 			
 			<ul>
 				<li>Earliest publication date for text&#58; lifecycle.publication.date.earliest</li>
-				<li> Latest publication date for text&#58; lifecycle.publication.date.latest</li>
+				<li>Latest publication date for text&#58; lifecycle.publication.date.latest</li>
 			</ul>
 			
 			<h2>Ranges &#40;numeric, date or text&#41;</h2>
@@ -277,28 +266,15 @@
 			<p>The extra options are&#58;</p>
 
 			<ul>
-				<li>Type &#45; Search on all the texts, or on Periodicals only.</li>
 				<li>Filter by date &#45; included undated, exclude undated, undated only, or specify a date or range</li>
-				<li>Specify which collection or collections to search on &#45; this should not be used in the labs site</li>
 				<li>Search on Description only, Full Text Only, or both</li>
-				<li>Filter by Illustrated, Not Illustrated, or both</li>
 				<li>Add rows to introduce additional search terms, using MUST, SHOULD or MUST NOT conditional logic, and searching on any fields available in the normal Search box</li>
 				<li>Reset button to clear down the search interface</li>
 			</ul>
 			
-			<a href="../images/support/screenshots/advancedsearchOA-1920px.jpg" target="_self"><img src="../images/support/screenshots/advancedsearchOA-700px.jpg" alt="screen shot showing advanced search options" title="screen shot showing advanced search options"></a>
-			
-			<br>
-			
-			<p>You can find out more about the Advanced Search features on Historical Texts by viewing our screencast on Advanced Search below&#58;</p>
-
-			<iframe title="Using teh advanced features of Historical Texts Youtube video" width="700" height="394" src="//www.youtube.com/embed/E20y4Mu5iHI?rel=0&vq=hd720" frameborder="0" allowfullscreen></iframe>
-
-			
-			<h2>Text type &#45; Periodicals search</h2> <!--check if changes to date change this-->
-			
-			<p>By default all text types will be searched automatically. To specify searching on Periodicals only, click the Periodicals button.
-			<br>Selecting the Periodicals button allows for finer graduations of date range to be entered into the Date Range field, in the format DD&#47;MM&#47;YYYY&#45;DD&#47;MM&#47;YYYY, e.g. 16&#47;1&#47;1642&#45;16&#47;10&#47;1653.</p>
+			<p>
+				<a href="../images/support/screenshots/advancedsearch-preview-1037px.jpg" target="_self"><img src="../images/support/screenshots/advancedsearch-preview-700px.jpg" alt="screen shot showing advanced search options" title="screen shot showing advanced search options"></a>
+			</p>
 				
 			<h2>Filter by date</h2> <!--check if date changes change this-->
 			
