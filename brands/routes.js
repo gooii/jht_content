@@ -3,7 +3,7 @@ var routes = {
   "archives"              : "about/archives.html;Archives",
   "news"                  : "about/news.html;News",
   "collections"           : "about/collections.html;Collections",
-  "titlelist"             : "about/titlelist.html;Title List",
+  "titlelist"             : "about/titlelistburney.html;Title List",
   "browser"               : "about/browser.html;Browser Compatibility",
   "support"               : "support/support.html;Support",
   "faq"                   : "support/faq.html;Frequently Asked Questions",
